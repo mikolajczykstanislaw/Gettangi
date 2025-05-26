@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Tangi - Coming Soon | Round 2 Pre Sale</title>
+        <meta
+            name="description"
+            content="Tangi Round 2 Pre Sale is coming soon. Stay tuned for the future of cannabis payments."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="assets/img/favicon.ico"
+        />
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/animate.min.css" />
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+        <style>
+            /* Coming Soon Page Styling */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #0a0a0a;
+                color: #ffffff;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                position: relative;
+            }
+
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at 30% 30%, rgba(112, 59, 255, 0.05) 0%, rgba(10, 10, 10, 0) 70%);
+                z-index: 0;
+            }
+
+            body::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at 70% 70%, rgba(75, 89, 245, 0.05) 0%, rgba(10, 10, 10, 0) 70%);
+                z-index: 0;
+            }
+
+            .coming-soon-container {
+                background-color: #ffffff;
+                border-radius: 20px;
+                padding: 40px 60px;
+                text-align: center;
+                box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+                max-width: 500px;
+                width: 90%;
+                position: relative;
+                z-index: 10;
+            }
+
+            .coming-soon-title {
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+
+            .pre-sale-title {
+                font-size: 42px;
+                font-weight: 800;
+                color: #333333;
+                margin-bottom: 25px;
+                line-height: 1.2;
+            }
+
+            .stay-tuned {
+                font-size: 18px;
+                color: #555555;
+                margin-bottom: 5px;
+            }
+
+            .tangi-text {
+                font-size: 28px;
+                font-weight: 700;
+                background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                margin-bottom: 15px;
+                letter-spacing: 1px;
+            }
+
+            .almost-here {
+                font-size: 18px;
+                color: #555555;
+                margin-bottom: 30px;
+            }
+
+            .return-button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+                color: white;
+                font-weight: 600;
+                text-decoration: none;
+                padding: 12px 30px;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            .return-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(112, 59, 255, 0.3);
+            }
+
+            .return-button i {
+                margin-right: 8px;
+            }
+
+            /* Background Elements */
+            .bg-element {
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.1;
+                z-index: 1;
+            }
+
+            .bg-element-1 {
+                width: 300px;
+                height: 300px;
+                background: linear-gradient(135deg, #703bff 0%, #4b59f5 100%);
+                top: -150px;
+                left: -150px;
+            }
+
+            .bg-element-2 {
+                width: 200px;
+                height: 200px;
+                background: linear-gradient(135deg, #4b59f5 0%, #703bff 100%);
+                bottom: -100px;
+                right: -100px;
+            }
+
+            .bg-element-3 {
+                width: 150px;
+                height: 150px;
+                background: linear-gradient(135deg, #703bff 0%, #4b59f5 100%);
+                top: 20%;
+                right: 10%;
+            }
+
+            .bg-element-4 {
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(135deg, #4b59f5 0%, #703bff 100%);
+                bottom: 15%;
+                left: 15%;
+            }
+
+            /* Responsive Styling */
+            @media (max-width: 767px) {
+                .coming-soon-container {
+                    padding: 30px;
+                }
+
+                .coming-soon-title {
+                    font-size: 28px;
+                }
+
+                .pre-sale-title {
+                    font-size: 36px;
+                }
+
+                .stay-tuned {
+                    font-size: 16px;
+                }
+
+                .tangi-text {
+                    font-size: 24px;
+                }
+
+                .almost-here {
+                    font-size: 16px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .coming-soon-container {
+                    padding: 25px 20px;
+                }
+
+                .coming-soon-title {
+                    font-size: 24px;
+                }
+
+                .pre-sale-title {
+                    font-size: 30px;
+                }
+
+                .tangi-text {
+                    font-size: 22px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Background Elements -->
+        <div class="bg-element bg-element-1"></div>
+        <div class="bg-element bg-element-2"></div>
+        <div class="bg-element bg-element-3"></div>
+        <div class="bg-element bg-element-4"></div>
+
+        <!-- Coming Soon Container -->
+        <div class="coming-soon-container">
+            <div class="coming-soon-title">Coming Soon!</div>
+            <h1 class="pre-sale-title">Round 2 Pre Sale</h1>
+            <p class="stay-tuned">Stay Tuned, The Future Of</p>
+            <div class="tangi-text">TANGI</div>
+            <p class="almost-here">Is Almost Here</p>
+            <a href="home.html" class="return-button">
+                <i class="fas fa-arrow-left"></i> Return To HomePage
+            </a>
+        </div>
+
+        <!-- JS here -->
+        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </body>
+</html>

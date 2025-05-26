@@ -1,0 +1,993 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ironik - ICO & Crypto Landing Page Template</title>
+    <meta name="description" content="Ironik - ICO & Crypto Landing Page Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/default-icons.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/tg-cursor.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Custom styles for testimonials */
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            /* Further reduced spacing between cards */
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 500px;
+            /* Fixed height for all cards */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* Hide overflow content */
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .breadcrumb__content {
+            text-align: center;
+        }
+
+        .testimonial-header {
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-header:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #0d6efd;
+        }
+
+        .testimonial-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 0;
+            margin-right: 10px;
+            color: #212529;
+        }
+
+        .testimonial-content {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #495057;
+            flex-grow: 1;
+            overflow-y: auto;
+            /* Add scrollbar if content is too long */
+            padding-right: 5px;
+            /* Space for scrollbar */
+        }
+
+        .testimonial-content p {
+            margin-bottom: 10px;
+            /* Reduced paragraph spacing */
+        }
+
+        .testimonial-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .testimonial-quote {
+            font-size: 24px;
+            color: #0d6efd;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+            /* Reduced spacing */
+            text-align: center;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: white;
+            margin-right: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-icon.telegram {
+            background-color: #0088cc;
+        }
+
+        .social-icon.x {
+            background-color: #000000;
+        }
+
+        .testimonial-location {
+            font-size: 14px;
+            color: #6c757d;
+            font-style: italic;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Make sure cards in the same row have proper spacing */
+        .row>[class*="col-"] {
+            margin-bottom: 15px;
+            /* Reduced spacing between rows */
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* Reduce spacing in blog details area */
+        .blog__details-area {
+            padding-bottom: 60px;
+            /* Reduced bottom padding */
+        }
+
+        .blog__details-area .container {
+            padding-top: 15px;
+            /* Reduced top padding */
+        }
+
+        /* Custom X icon */
+        .fa-x {
+            font-weight: bold;
+            font-style: normal;
+            font-size: 16px;
+        }
+
+        /* Adjust container padding */
+        .container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* Adjust row gutters */
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="header" class="transparent-header">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo">
+                                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="home.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home.html#investment-options-section">The offer</a></li>
+                                            <li><a href="home.html#our-media">Our Media</a></li>
+                                            <li><a href="home.html#features">Features</a></li>
+                                            <li><a href="home.html#roadmap">Roadmap</a></li>
+                                            <li><a href="home.html#faq">FAQ</a></li>
+                                            <li><a href="home.html#contact">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="">Investors Hub</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="the-problem.html">The Problem</a></li>
+                                            <li><a href="our-solution.html">Our Solution</a></li>
+                                            <li><a href="ourpeople.html">Our People</a></li>
+                                            <li><a href="our-partners.html">Our Partners</a></li>
+                                            <li class="menu-item-has-children horizontal-dropdown"><a
+                                                    href="#">Public Listing</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="investment-to-listing.html">Overview</a></li>
+                                                    <li><a href="getting-in-entry-plan.html">Getting In - The Entry
+                                                            Plan</a></li>
+                                                    <li><a href="getting-out-exit-plan.html">Getting Out - The Exit
+                                                            Plan</a></li>
+                                                    <li><a href="hold-for-more-upside.html">Or Hold For More
+                                                            Upside?</a></li>
+                                                    <li><a href="end-users-buy-you-profit.html">End Users Buy, You
+                                                            Profit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="active"><a href="Round_1_Investors_Testimonials.html">Round 1 Investors
+                                                    Testimonials</a></li>
+                                            <li><a href="how-our-solution-works.html">How Our Solution Works</a>
+                                            </li>
+                                            <li><a href="investor-highlight-reel.html">Investor Highlight Reel</a>
+                                            </li>
+                                            <li><a href="market-entry-strategy.html">Market Entry Strategy</a></li>
+                                            <li><a href="market-potential.html">Market Potential</a></li>
+                                            <li><a href="tangi-tokenomics.html">Tangi Tokenomics</a></li>
+                                            <li><a href="legal-landscape.html">Legal Landscape</a></li>
+                                            <li><a href="our-story.html">Our Story</a></li>
+                                            <li><a href="special-thanks.html">Round 1 Members, Thank You!</a></li>
+                                            <li><a href="tangi-roadmap.html">Our Past, Present & Future</a></li>
+                                            <li><a href="mitigating-risk-factors.html">Mitigating Risk Factors</a>
+                                            </li>
+                                            <li><a href="risk-warning.html">Risk Warning for Investors</a></li>
+                                            <li><a href="potential-roi.html">The Potential ROI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://t.me/GetTangiToken" class="section-link">Connect To
+                                            Investors </a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <li class="header-btn">
+                                        <a href="./coming_soon_page.html" class="tg-btn">
+                                            <img src="assets/img/icons/btn_right_arrow.svg" alt="icon"
+                                                class="right_arrow">
+                                            <span>
+                                                <img src="assets/img/icons/btn_icon.svg" alt="">
+                                                Buy Token
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+            <div class="nav-logo">
+                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tgmobile__menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="https://t.me/GetTangiTokentelegram" title="Telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@tangicrypto170" title="YouTube" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://twitter.com/gettangi?s=21" title="X (Twitter)" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512"
+                                fill="currentColor">
+                                <path
+                                    d="M370.6 32H471L305.4 241.4 504 480H351.6L234.4 328.8 99.4 480H0L179.2 256 0 32h157.6l104.8 130.4L370.6 32z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://discord.gg/Ff7ehSTf" title="Discord" target="_blank"><i
+                                class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <!-- header-search -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search__wrapper">
+                        <div class="search__close">
+                            <button type="button" class="search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type keywords here">
+                                    <span class="search-focus-border"></span>
+                                    <button>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup-overlay"></div>
+    <!-- header-search-end -->
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area">
+            <div class="breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.png"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb__content">
+                            <h1 class="title">Round 1 Investors Testimonials</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- testimonials-area -->
+        <section class="blog__details-area section-pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>What Our Clients Say</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Testimonial 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Barry Maguire</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@Bazmag76" class="social-icon telegram"><i
+                                            class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/bazm2016" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>It got involved with this project a few years ago and could see the massive potential
+                                    of this payment solution.</p>
+                                <p>It has since developed over the years into something that super exceeds my
+                                    expectations and our fellow early investor's.</p>
+                                <p>The Tangi team and administrators have worked tirelessly and have kept the early
+                                    investors in the loop through the whole process.</p>
+                                <p>What this has transformed into is just genius and it's only going to catapult in
+                                    round 2.</p>
+                                <p>I have staked my full investment for 18 months as I believe so much in what this team
+                                    is going to achieve.</p>
+                                <p>The community is fully behind this project and this team. I want to wish team Tangi
+                                    well as we approach round 2. You are working so hard and I for one appreciate it. We
+                                    are going places with this project. FACT.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">James Beutow</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@Jamestheviking"
+                                        class="social-icon telegram"><i class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/beutowjame53633" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>I am beyond impressed with Tangi's payment solution for the cannabis industry and
+                                    beyond. As an early investor, the wait has been worth it. The project has evolved
+                                    into much more than I originally invested in.</p>
+                                <p>Developments such as, a "Amazon of cannabis" online superstore called The Pickup
+                                    Joint, and most importantly, now being bank backed and fully compliant. I trust the
+                                    solid and credible team behind Tangi, which includes a ex assistant Chief of Staff
+                                    to the President of the USA and a former Prime Minister of Ireland to name a few.
+                                    The ROI is looking better and everyday. I encourage my friends, family, and everyone
+                                    else to invest in Tangi.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Jonathan Meissner</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@TwistedFate1214"
+                                        class="social-icon telegram"><i class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/TwistedFate1214" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>My Buddy told me about Tangi and I decided to Invest in it April. I really believe
+                                    that this project will be very successful. This payment solution is really going to
+                                    help with seamless transactions. Tangi is going to make things easier and faster.
+                                </p>
+                                <p>I'm glad that I am now part of this project and I can't wait to see it through and
+                                    see this project Grow every day. I would love to tell other people about this
+                                    project and to invest in the round 2 pre sales.</p>
+                                <p>I'm amped up for this project and love all the content that I'm seeing with it. This
+                                    group is very special and I'm glad that I got invited to be part of it.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Paul Smith</h3>
+                                <span class="testimonial-location">UK based investor</span>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>I chose to invest in the Tangi payment and reward solution at its inception nearly 4
+                                    years ago. Tired of being scammed in the crypto world, I now only invest in projects
+                                    which have a definitive end use and uptake potential. I felt that Tangi offered that
+                                    and still do.</p>
+                                <p>The project has taken many twists and turns to get to the legal compliance stage it
+                                    has reached. It is now poised to roll out into stores providing a long needed
+                                    solution to the cash burdened US cannabis industry, providing banking solutions, an
+                                    online retailer platform and payment methods for consumers, more akin to the real
+                                    world, with opportunities for buyer rewards and incentives.</p>
+                                <p>I continue to invest and support this project and would encourage anyone considering
+                                    such an investment to take advantage of round 2. This is such an important
+                                    investment for me I have staked the majority of the tokens I hold for 18 months,
+                                    earning exceptional bonuses in the process.</p>
+                                <p>If you would like to know more from myself please feel free to contact me by email on
+                                    smithpc1963@protonmail.com. I'm happy to answer any questions you may have.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Stephen Hamilton</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@steomutts" class="social-icon telegram"><i
+                                            class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/crypto217817538" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>My name is Stephen, and I'm an early investor in the Gettangi project. After
+                                    carefully reviewing the team, their whitepaper, and their roadmap, I made the
+                                    decision to get involved, not just because of the opportunity, but because of the
+                                    integrity and professionalism behind the project.</p>
+                                <p>What stood out to me was the unique approach Gettangi is taking to bring compliance,
+                                    efficiency, and innovation to the cannabis industry using blockchain technology.
+                                    This isn't just a concept, it's a well executed plan backed by a team that clearly
+                                    knows what they're doing and has the capability to deliver.</p>
+                                <p>As we move into Round 2 of the presale, I believe the fundamentals speak for
+                                    themselves. From my experience so far, communication has been transparent, the
+                                    community is growing steadily, and the project's vision is gaining real traction.
+                                </p>
+                                <p>For anyone considering whether to invest, I encourage you to do your own research,
+                                    speak to the team, and ask questions in the community.</p>
+                                <p>This is one of those rare opportunities and I'm glad I got in early.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Jeury Valdez</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@Dominikano1108"
+                                        class="social-icon telegram"><i class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/Jeury" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>I bought my first Tangi tokens back in November 2021, and I've been following the
+                                    project closely ever since. What stood out to me then (and still does now) is that
+                                    Tangi isn't just another crypto trying to follow hype. It's a real solution to a
+                                    real problem: fixing the broken payment system in the cannabis industry.</p>
+                                <p>What gave me confidence to invest was the team's long-term vision and the way they've
+                                    done things right from the start. Tangi is fully compliant, backed by a bank, and
+                                    built to grow, something you rarely find in this space. It's refreshing to see a
+                                    project that's not only innovative, but also solid and responsible.</p>
+                                <p>For anyone looking into Tangi, I'd say this: take the time to understand what they're
+                                    building. It's not about hype, it's about solving real-world problems with a
+                                    practical, future-ready solution. I'm proud to be an early supporter and truly
+                                    believe in what this project stands for.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 7 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Mohan Patel</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://x.com/MohanPatel050" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>As someone who's been in the crypto space for over five years, I've seen countless
+                                    projects come and go. What caught my attention with Tangi Token was its real-world
+                                    utility in an industry that's desperately needed innovation — cannabis payments.
+                                    After following their progress for the past year, I'm genuinely impressed by the
+                                    team's commitment and the technology you've built over four years.</p>
+                                <p>The cannabis market is massive, but payment solutions have always been a bottleneck.
+                                    Many projects have started and failed in doing so. Tangi Token is solving that
+                                    problem with a fast, secure, and borderless system designed specifically for this
+                                    space. I got in during Round 1 and have already seen growing interest from both
+                                    investors and dispensary owners.</p>
+                                <p>With Round 2 priced at $0.80 before a $1.50 public listing, I believe this is one of
+                                    those rare opportunities you don't see often in crypto. Tangi isn't just another
+                                    token — it's a financial bridge for a $45 billion industry. I'm proud to be part of
+                                    this project and can't wait to see where it goes next.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 8 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">John R.</h3>
+                                <span class="testimonial-location">Dallas, Texas</span>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>As an early investor with Tangi since its inception, I've witnessed firsthand how
+                                    this project stands head and shoulders above other crypto ventures. What initially
+                                    caught my eye wasn't just the enormous market potential in cannabis payments—it was
+                                    the extraordinary caliber of leadership behind it. With advisors including a former
+                                    Irish Prime Minister, BitShares founders, and a White House deputy chief of staff,
+                                    Tangi assembled a team that commands respect across politics, technology, and
+                                    business.</p>
+                                <p>The CEO's 20+ years leading high-tech startups, coupled with board members from
+                                    prestigious institutions like Canadore College, convinced me this wasn't just
+                                    another token project. This diverse, world class team understands blockchain
+                                    innovation and the cannabis industry's unique challenges from the inside.</p>
+                                <p>While other projects promised quick returns, Tangi built something with genuine
+                                    utility and compliance. Watching their methodical approach over the years has only
+                                    reinforced my conviction in their vision for revolutionizing cannabis payments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 9 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Paul</h3>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>Tangi Token isn't just another crypto project it's a complete ecosystem with
+                                    real-world utility that solves one of the most frustrating problems in the cannabis
+                                    industry: payments. As a consumer, the experience is seamless. I can pay with my
+                                    card or use Tangi tokens, and I actually earn rewards just for shopping. It's
+                                    refreshing to see a platform that gives something back to customers and feels simple
+                                    enough for anyone to use.</p>
+                                <p>From the perspective of retailers I've spoken with, the benefits are massive. Lower
+                                    transaction fees, compliant banking services, and an easy path to accepting digital
+                                    payments have been game changers. Tangi not only helps dispensaries operate more
+                                    efficiently, but it also gives them a presence on 'The Pick Up Joint' marketplace,
+                                    expanding their customer base and improving visibility. It's a full service solution
+                                    not just a wallet and a coin.</p>
+                                <p>As an investor, what stands out most is the clarity of the business model. Tangi
+                                    generates real revenue through transaction fees in a $45B+ industry that's only
+                                    going to grow. The fact that it's already tested in dispensaries, backed by banking
+                                    partnerships, and on track for public listing with a clear roadmap shows serious
+                                    long term potential.</p>
+                                <p>Tangi isn't a meme or a pump and dump it's a carefully built payment solution with a
+                                    seasoned team behind it. With utility, compliance, and scalability baked in, I
+                                    believe Tangi is poised to become the standard for cannabis payments and I'm proud
+                                    to be a part of the movement from the start.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 10 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">James McAleer</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://x.com/MediaHub6408" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>I am so proud to support Tangi Token because I truly believe in its vision to
+                                    revolutionise the digital economy / cannabis market.</p>
+                                <p>Tangi's innovative approach to blockchain technology and its commitment to
+                                    transparency, security, and community empowerment resonate deeply with me ever since
+                                    I contacted them in 2021.</p>
+                                <p>By supporting Tangi Token, I am confident that we are contributing to a future where
+                                    decentralised finance becomes accessible and beneficial for everyone.</p>
+                                <p>I trust in the team's dedication and the potential of Tangi to create meaningful
+                                    impact in the crypto cannabis space.</p>
+                                <p>For these reasons, I wholeheartedly back Tangi Token and encourage others to join
+                                    this exciting journey into round 2 and beyond.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 11 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Magnus Vladimir</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@MagnusVladimir"
+                                        class="social-icon telegram"><i class="fab fa-telegram-plane"></i></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>One of the hard truths I've learned in the crypto space is that real utility projects
+                                    with strong teams are tough to find. That's exactly what Tangi Token is. Let's be
+                                    real, I didn't jump in right away. I took my time to dug deep and did my research
+                                    before getting involved. Their decision to fix the payment issues in the cannabis
+                                    industry, a multibillion-dollar market still relying on outdated cash systems,
+                                    caught my attention. Big problems mean big opportunities especially for us
+                                    investors.</p>
+                                <p>It was clear Tangi Token weren't just building hype, they're building real solution
+                                    to a serious issue with a secure payment system. What convinced me this isn't just
+                                    another quick pump and dump was the caliber of the team that includes people with
+                                    extensive knowledge and experience in blockchain, finance, regulatory system and the
+                                    cannabis industry, and the advisors involved bring even more credibility to the
+                                    project.</p>
+                                <p>As an early investor of Tangi Token, I'm impressed with the transparency and
+                                    communication from the team. The roadmap and goals are realistic and the team always
+                                    make sure that they back it up with consistent progress and results.</p>
+                                <p>It's still early and I'm excited for the future of Tangi Token. Again this isn't
+                                    financial advice, I'm just sharing my two cents. If you're considering Round 2 of
+                                    presale, look into it for yourself and do your research and I'm confident you'll see
+                                    the potential of this project. For any questions feel free to leave a message on
+                                    Telegram @MagnusVladimir.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 12 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Wyatt</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@Wyatt" class="social-icon telegram"><i
+                                            class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/wildchild63_" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>I got into Tangi after a family member gifted me a few hundred tokens. I was told it
+                                    was a great investment and that I should read up more on it. Since then, I've seen
+                                    the amazing potential in the project and it made me want to be more involved in the
+                                    ambassador program.</p>
+                                <p>I am learning a lot in the web3 world, and crypto space. I would definitely recommend
+                                    someone investing into Round 2. Investing in the Tangi team from what I've seen is a
+                                    team that really cares for the community.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 13 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Carl S</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@Cryptoloki1976"
+                                        class="social-icon telegram"><i class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/Cryptoloki1976" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>I am genuinely excited to share my experience with Tangi! Being part of their
+                                    innovative journey has been nothing short of remarkable. Their dedication to
+                                    delivering cutting-edge payment solutions tailored for the cannabis industry is a
+                                    game changer. The Tangi Token isn't just a digital currency; it's a revolutionary
+                                    leap in how transactions are processed, making them seamless and efficient for both
+                                    retailers and consumers.</p>
+                                <p>Additionally, their focus on rewards and functionality illustrates a deep
+                                    understanding of the market's needs, setting a new benchmark in the legal cannabis
+                                    sector. I'm eager to witness the evolution of Tangi as they continue to innovate and
+                                    improve their offerings. If you're involved in the cannabis industry, I highly
+                                    recommend getting on board with Tangi.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 14 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Nick Pellegrini</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@Keyfactor50" class="social-icon telegram"><i
+                                            class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/Keyfactor50" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>I invested in Tangi back in December 2021. The main reason why I invested back then
+                                    was because I thought the project was cool. As years went on, and I learned more
+                                    about the project, it was a blessing that my brain got me in something that I truly
+                                    believe in for the long-term. And as the years past, I got to be a part of this
+                                    great community, and I get to help market something that I truly believe can be part
+                                    of the future with their digital payment solution.</p>
+                                <p>The Tangi team has made me feel a part of the project. I have gotten a few friends to
+                                    invest in Tangi. They firmly believed in what I have told them about the project,
+                                    and I would do the same again for any person that was to invest in Round 2
+                                    pre-sales.</p>
+                                <p>I'm very excited for the road that lies ahead for Tangi. This team always seems to
+                                    deliver, and I am truly glad I am part of this journey.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 15 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Prince</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@Redeemed100" class="social-icon telegram"><i
+                                            class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/princeyolo03" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                                <span class="testimonial-location">@Redeemed100 on Telegram, @princeyolo03 on X</span>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>Hello! I'm Prince and I've been an early supporter of Tangi since the first token
+                                    round. I wanted to share why this project captured my attention, why I'm so
+                                    impressed with the team, and why I believe others should seriously consider jumping
+                                    on board.</p>
+                                <p>First and foremost, the Tangi team seems to be the real deal. They're not just
+                                    throwing around buzzwords; they've been building this crypto payment solution for
+                                    more than four years with a team that includes a CEO who's a blockchain veteran and
+                                    advisors like a former Prime Minister and ex-White House Chief of Staff. That's the
+                                    kind of muscle that gives me a sense of confidence.</p>
+                                <p>Why did I invest? Simple, Tangi's tackling a broken market with massive potential,
+                                    and their token is built for real value growth. The cannabis industry is a $45
+                                    billion juggernaut in the U.S. alone, but it's crippled by cash-only transactions
+                                    because banks steer clear. Tangi's bank-backed, fully legal payment system fixes
+                                    that, and their token is the backbone of it.</p>
+                                <p>Why should you invest? Tangi isn't selling a dream, it's selling a working solution
+                                    in a multi-billion-dollar market. Those 60 million unbanked consumers and thousands
+                                    of dispensaries are not just numbers; they're actual people and businesses ready to
+                                    use Tangi's system right now.</p>
+                                <p>Man, I've been burned by too many crypto projects that talk big and then flop. Tangi
+                                    stands out. Tangi's taking on a legit challenge in the cannabis industry, and Ronald
+                                    Strauss's team has the expertise to pull it off with flair. I'm excited to see where
+                                    this goes, and I think you'd be smart to take a look too.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 16 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Scott Hyde</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://t.me/@scotty1980" class="social-icon telegram"><i
+                                            class="fab fa-telegram-plane"></i></a>
+                                    <a target="_blank" href="https://x.com/scottyh1980" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                                <span class="testimonial-location">UK first round investor</span>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>"Success is not final, failure is not fatal: It is the courage to continue that
+                                    counts."</p>
+                                <p>After years of hard work and some big hurdles along the way quietly in the
+                                    background, Tangi is ready to make some noise with their cannabis bank-backed
+                                    solution, ready to be rolled out in dispensaries across the US and into the hands of
+                                    the buyers. No more struggles that cash can carry, Tangi is solving a real world
+                                    issue.</p>
+                                <p>Tangi Token will be used and can be bought now as round 2 presale commences. As a
+                                    round 1 buyer, myself and other initial investors have staked our tokens for up to
+                                    18 months, proving we have faith in our investment and beyond.</p>
+                                <p>"People do not decide to become extraordinary. They decide to accomplish
+                                    extraordinary things."</p>
+                                <p>Come and join me, the team and all first round buyers and embark on the Tangi
+                                    journey. With what Tangi have planned with their token listing, their Amazon style
+                                    cannabis marketplace called 'the pick up joint' and venturing into other avenues in
+                                    the future round 2 looks sure to be a sellout.</p>
+                                <p>Tangi has done all the hard work and first round investors took all the risk so now
+                                    is the perfect time to hop on board.</p>
+                                <p>We the Tangi community look forward to you and other like minded investors joining us
+                                    and being part of the Tangi revolution.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 17 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <h3 class="testimonial-name">Tim Day</h3>
+                                <div class="social-icons">
+                                    <a target="_blank" href="https://x.com/timday1982" class="social-icon x"><span
+                                            class="fa-x">X</span></a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left testimonial-quote"></i>
+                                <p>Tangi Token isn't just another crypto currency to me - it's a movement. I'm deeply
+                                    passionate about the potential it holds to revolutionize the legal Cannabis
+                                    industry. The team's dedication to solving the cash only problem that dispensaries
+                                    have resonates with me, and I believe their innovative approach can create lasting
+                                    change.</p>
+                                <p>What truly touched my heart is the team's commitment to bringing the project to life,
+                                    from an idea to a fully functional payment solution that solves a big problem!</p>
+                                <p>Yes, the project has been a slow burner but I didn't understand the hurdles that had
+                                    to be overcome to get the project ready, the regulation, the banking partnership,
+                                    market research, speaking to dispensaries, laying the foundations! It's clear that
+                                    the team genuinely cares about making a positive impact.</p>
+                                <p>I'm excited to be part of this journey and contribute to the growth of the Tangi
+                                    Token community. I've learnt so much since i joined the telegram all those years
+                                    ago. I truly believe in the team's vision, and I'm confident that together, we can
+                                    achieve great things.</p>
+                                <p>Tangi token isn't "just" another crypto project, it's a game changer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonials-area-end -->
+
+    </main>
+    <!-- main-area-end -->
+
+
+    <!-- footer-area -->
+    <footer class="footer__area footer__area-two">
+        <div class="container">
+            <div class="footer__inner-wrap">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright-text">
+                            <p>Copyright & design by <a href="https://themeforest.net/user/themeadapt"
+                                    target="_blank">@Themeadapt</a> - 2025</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__view-channel">
+                            <span>VIP channel:</span>
+                            <a href="https://web.telegram.org" target="_blank" class="tg-btn">
+                                <img src="assets/img/icons/btn_right_arrow.svg" alt="icon" class="right_arrow">
+                                <span>
+                                    <img src="assets/img/icons/btn_icon_04.svg" alt="">
+                                    telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

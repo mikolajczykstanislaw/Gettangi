@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Tangi - The Potential ROI From The Investors Perspective</title>
+    <meta name="description" content="Learn about the potential return on investment for Tangi Token investors" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/default-icons.css" />
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/tg-cursor.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* ROI Page Styling */
+
+        /* General Styling */
+        .roi-section {
+            padding: 120px 0;
+            background-color: #0a0a0a;
+            position: relative;
+        }
+
+        /* Centered Container */
+        .roi-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Section Title Styling - Centered */
+        .roi-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .roi-section h3 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .roi-section h5 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .roi-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Intro Text Styling - Centered */
+        .intro-text {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #ffffff;
+            font-weight: 500;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .breadcrumb__content {
+            text-align: center;
+        }
+
+        /* ROI Card Styling - Centered */
+        .roi-card {
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        .roi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .roi-card h4 {
+            font-size: 22px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .roi-card p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .roi-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Step Number Styling */
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ROI Image Styling - Centered */
+        .roi-image {
+            text-align: center;
+            margin: 40px auto;
+            position: relative;
+            max-width: 800px;
+        }
+
+        .roi-image:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.2) 0%,
+                    rgba(75, 89, 245, 0.2) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .roi-image:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.15) 0%,
+                    rgba(75, 89, 245, 0.15) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .roi-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Value Table Styling - Centered */
+        .value-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .value-table th {
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .value-table td {
+            padding: 20px 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .value-table tr:nth-child(even) {
+            background: rgba(112, 59, 255, 0.03);
+        }
+
+        .value-table tr:hover {
+            background: rgba(112, 59, 255, 0.05);
+        }
+
+        .value-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Highlight Box Styling - Centered */
+        .highlight-box {
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(75, 89, 245, 0.05) 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px auto;
+            position: relative;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            max-width: 800px;
+        }
+
+        .highlight-box ul {
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .highlight-box li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            color: #ffffff;
+            font-size: 16px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .highlight-box li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            border-radius: 50%;
+        }
+
+        .highlight-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Exit Strategy Styling - Centered */
+        .exit-strategy {
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        .exit-strategy:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .exit-strategy h4 {
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-bottom: 2px solid rgba(112, 59, 255, 0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .exit-strategy p {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        /* OR Divider Styling - Centered */
+        .or-divider {
+            text-align: center;
+            margin: 30px auto;
+            position: relative;
+            max-width: 400px;
+        }
+
+        .or-divider:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+        }
+
+        .or-divider span {
+            background: #0a0a0a;
+            padding: 0 20px;
+            position: relative;
+            z-index: 5;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* Final CTA Styling - Centered */
+        .final-cta {
+            background: linear-gradient(135deg,
+                    rgba(51, 51, 51, 0.5) 0%,
+                    rgba(34, 34, 34, 0.5) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px auto;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+        }
+
+        .final-cta h3 {
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .final-cta p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Button Styling - Centered */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid #703bff;
+            color: #703bff;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 220px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .cta-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: white;
+        }
+
+        .cta-button:hover:before {
+            width: 100%;
+        }
+
+        /* ROI Calculator - New Addition - Centered */
+        .roi-calculator {
+            background: rgba(112, 59, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px auto;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+        }
+
+        .roi-calculator h4 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .roi-calculator-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .roi-calculator-label {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 500;
+            flex: 0 0 40%;
+        }
+
+        .roi-calculator-input {
+            flex: 0 0 55%;
+            position: relative;
+        }
+
+        .roi-calculator-input input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .roi-calculator-input input:focus {
+            outline: none;
+            border-color: rgba(112, 59, 255, 0.5);
+        }
+
+        .roi-calculator-result {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(75, 89, 245, 0.05) 100%);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .roi-calculator-result h5 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .roi-calculator-value {
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 0;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb__area .sub-title {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(90deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(22, 37, 97, 0.1) 100%);
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb__area .sub-title svg path {
+            fill: #703bff;
+        }
+
+        .breadcrumb__area .title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Center all rows */
+        .roi-section .row {
+            justify-content: center;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 991px) {
+            .roi-section {
+                padding: 80px 0;
+            }
+
+            .roi-section h2 {
+                font-size: 32px;
+            }
+
+            .roi-section h3 {
+                font-size: 26px;
+            }
+
+            .roi-card {
+                padding: 30px;
+            }
+
+            .roi-card h4 {
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .highlight-box {
+                padding: 25px;
+            }
+
+            .exit-strategy {
+                padding: 25px;
+            }
+
+            .exit-strategy h4 {
+                font-size: 18px;
+            }
+
+            .final-cta {
+                padding: 30px;
+            }
+
+            .final-cta h3 {
+                font-size: 28px;
+            }
+
+            .value-table th {
+                font-size: 16px;
+                padding: 15px 10px;
+            }
+
+            .value-table td {
+                font-size: 14px;
+                padding: 15px 10px;
+            }
+
+            .roi-calculator {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .roi-section h2 {
+                font-size: 28px;
+            }
+
+            .roi-section h3 {
+                font-size: 24px;
+            }
+
+            .roi-card {
+                padding: 25px;
+            }
+
+            .roi-card h4 {
+                font-size: 18px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+
+            .intro-text {
+                font-size: 18px;
+            }
+
+            .highlight-box {
+                padding: 20px;
+            }
+
+            .highlight-box li {
+                padding-left: 25px;
+                font-size: 15px;
+                display: block;
+                text-align: center;
+            }
+
+            .exit-strategy {
+                padding: 20px;
+            }
+
+            .exit-strategy h4 {
+                font-size: 17px;
+            }
+
+            .final-cta {
+                padding: 25px;
+            }
+
+            .final-cta h3 {
+                font-size: 24px;
+            }
+
+            .final-cta p {
+                font-size: 16px;
+            }
+
+            .roi-calculator {
+                padding: 25px;
+            }
+
+            .roi-calculator-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .roi-calculator-label {
+                margin-bottom: 10px;
+                flex: 0 0 100%;
+                text-align: center;
+            }
+
+            .roi-calculator-input {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .roi-section h2 {
+                font-size: 26px;
+            }
+
+            .roi-section h3 {
+                font-size: 22px;
+            }
+
+            .roi-card {
+                padding: 20px;
+            }
+
+            .roi-card h4 {
+                font-size: 17px;
+            }
+
+            .intro-text {
+                font-size: 16px;
+            }
+
+            .highlight-box {
+                padding: 15px;
+            }
+
+            .exit-strategy {
+                padding: 15px;
+            }
+
+            .final-cta {
+                padding: 20px;
+            }
+
+            .final-cta h3 {
+                font-size: 22px;
+            }
+
+            .roi-calculator {
+                padding: 20px;
+            }
+
+            .roi-calculator-value {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="header" class="transparent-header">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo">
+                                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="home.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home.html#investment-options-section">The offer</a></li>
+                                            <li><a href="home.html#our-media">Our Media</a></li>
+                                            <li><a href="home.html#features">Features</a></li>
+                                            <li><a href="home.html#roadmap">Roadmap</a></li>
+                                            <li><a href="home.html#faq">FAQ</a></li>
+                                            <li><a href="home.html#contact">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="">Investors Hub</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="the-problem.html">The Problem</a></li>
+                                            <li><a href="our-solution.html">Our Solution</a></li>
+                                            <li><a href="ourpeople.html">Our People</a></li>
+                                            <li><a href="our-partners.html">Our Partners</a></li>
+                                            <li class="menu-item-has-children horizontal-dropdown"><a
+                                                    href="#">Public Listing</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="investment-to-listing.html">Overview</a></li>
+                                                    <li><a href="getting-in-entry-plan.html">Getting In - The Entry
+                                                            Plan</a></li>
+                                                    <li><a href="getting-out-exit-plan.html">Getting Out - The Exit
+                                                            Plan</a></li>
+                                                    <li><a href="hold-for-more-upside.html">Or Hold For More
+                                                            Upside?</a></li>
+                                                    <li><a href="end-users-buy-you-profit.html">End Users Buy, You
+                                                            Profit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="Round_1_Investors_Testimonials.html">Round 1 Investors
+                                                    Testimonials</a></li>
+                                            <li><a href="how-our-solution-works.html">How Our Solution Works</a>
+                                            </li>
+                                            <li><a href="investor-highlight-reel.html">Investor Highlight Reel</a>
+                                            </li>
+                                            <li><a href="market-entry-strategy.html">Market Entry Strategy</a></li>
+                                            <li><a href="market-potential.html">Market Potential</a></li>
+                                            <li><a href="tangi-tokenomics.html">Tangi Tokenomics</a></li>
+                                            <li><a href="legal-landscape.html">Legal Landscape</a></li>
+                                            <li><a href="our-story.html">Our Story</a></li>
+                                            <li><a href="special-thanks.html">Round 1 Members, Thank You!</a></li>
+                                            <li><a href="tangi-roadmap.html">Our Past, Present & Future</a></li>
+                                            <li><a href="mitigating-risk-factors.html">Mitigating Risk Factors</a>
+                                            </li>
+                                            <li><a href="risk-warning.html">Risk Warning for Investors</a></li>
+                                            <li class="active"><a href="potential-roi.html">The Potential ROI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://t.me/GetTangiToken" class="section-link">Connect To
+                                            Investors </a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <li class="header-btn">
+                                        <a href="./coming_soon_page.html" class="tg-btn">
+                                            <img src="assets/img/icons/btn_right_arrow.svg" alt="icon"
+                                                class="right_arrow">
+                                            <span>
+                                                <img src="assets/img/icons/btn_icon.svg" alt="">
+                                                Buy Token
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+            <div class="nav-logo">
+                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tgmobile__menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="https://t.me/GetTangiTokentelegram" title="Telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@tangicrypto170" title="YouTube" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://twitter.com/gettangi?s=21" title="X (Twitter)" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512"
+                                fill="currentColor">
+                                <path
+                                    d="M370.6 32H471L305.4 241.4 504 480H351.6L234.4 328.8 99.4 480H0L179.2 256 0 32h157.6l104.8 130.4L370.6 32z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://discord.gg/Ff7ehSTf" title="Discord" target="_blank"><i
+                                class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <!-- header-search -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search__wrapper">
+                        <div class="search__close">
+                            <button type="button" class="search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type keywords here">
+                                    <span class="search-focus-border"></span>
+                                    <button>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup-overlay"></div>
+    <!-- header-search-end -->
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area">
+            <div class="breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.png"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb__content">
+                            <h1 class="title">The Potential ROI</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- roi-section -->
+        <section class="roi-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>From The Investors Perspective</h2>
+                        <p class="intro-text">
+                            As an investor, your focus is simple: How does this token increase in value, and how do you exit profitably?
+                        </p>
+                        <p class="intro-text">
+                            Tangi Token isn’t a speculative gamble—it’s a first-to-market, utility-driven payment solution with built-in demand. Every step of our rollout is designed to drive adoption, create buy pressure, and ensure investor profits.
+                        </p>
+                        <p class="intro-text">
+                            Everyone in the chain—consumers, retailers, and our company—is incentivised to adopt and promote token payments, which in turn means they unknowingly work to drive investor profits.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="roi-image">
+                            <img src="assets/img/otherpage/FromTheInvestorsPerspective.webp"
+                                alt="Tangi Token Trading Dashboard" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Here’s how we make it all happen for you:</h3>
+
+                        <div class="roi-card">
+                            <h4>
+                                <span class="step-number">1</span> Our
+                                Closed-Loop System
+                            </h4>
+                            <h5>Creating Initial Token Adoption</h5>
+                            <p>
+                                Once consumers have transitioned to regular token use, we make the process effortless by setting them up on automatic replenishment. Their token wallets are topped up on a recurring basis, ensuring they always have tokens available for purchases. This seamless system means consumers continue enjoying rewards and discounts without any extra effort, while retailers benefit from a steady flow of token transactions. The result? A self-sustaining cycle of continuous token demand, driving value and long-term growth.
+                            </p>
+                        </div>
+
+                        <div class="roi-card">
+                            <h4>
+                                <span class="step-number">2</span> Seamless
+                                Transition to Public Exchange
+                            </h4>
+                            <h5>
+                                From Our Closed Loop to Investor-Driven
+                                Supply
+                            </h5>
+                            <p>
+                                As adoption increases and end users become reliant on the token, we gradually transition them from the closed-loop system to the public exchange—seamlessly and without disruption. As end users shift from our internal system to the public exchange, investors take over as the exclusive source of token supply—driving sustained demand and value appreciation. Since they’re already on an automatic monthly subscription with us, their wallets top up effortlessly. The only change? Instead of purchasing from our closed-loop system, their auto-renewal shifts to the exchange, ensuring continuous demand without them even noticing the transition. This means millions of buyers will be looking for tokens, repeatedly purchasing every week, and the only people selling are early investors like you.
+                            </p>
+                        </div>
+
+                        <div class="roi-card">
+                            <h4>
+                                <span class="step-number">3</span> Presale
+                                Investors Control Supply
+                            </h4>
+                            <h5>Demand Will Drive the Value</h5>
+                            <p>
+                                At the time of public listing, the entire circulating supply—just 50 million presale tokens—will be exclusively held by you and your fellow early investors, feeding the anticipated surge in demand.
+                            </p>
+                            <p>
+                                New investors and millions of end users will be competing to buy, but they can only purchase from you. With fixed supply and surging demand, the token’s value is poised for natural appreciation.
+                            </p>
+
+                            <div class="highlight-box">
+                                <ul>
+                                    <li>
+                                        Built-in, predictable buy pressure
+                                    </li>
+                                    <li>
+                                        Not just one-time buyers—every user
+                                        is on repeat purchase
+                                    </li>
+                                    <li>
+                                        Millions of end users automatically
+                                        replenishing their wallets every
+                                        month
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <p>
+                                As a Round 2 investor, you’re in a prime position to capitalize on continuous demand—whether selling to incoming investors at listing or holding as mass adoption accelerates.
+                            </p>
+                        </div>
+
+                        <div class="roi-card">
+                            <h4>
+                                <span class="step-number">4</span> Potential
+                                Token Value
+                            </h4>
+                            <h5>The Numbers Speak for Themselves</h5>
+                            <p>
+                                Let's look at the numbers based on potential
+                                market penetration:
+                            </p>
+
+                            <div class="highlight-box">
+                                <ul>
+                                    <li>
+                                        At just 1% of the market ($330M in transactions), each token would be worth $6.60
+                                    </li>
+                                    <li>
+                                        At 5% market penetration ($1.65B in transactions), each token could be $33+
+                                    </li>
+                                    <li>
+                                        Capture 10% of the market, and now you’re looking at a $66+ per token value.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="roi-card">
+                            <h4>
+                                <span class="step-number">5</span> Multiple
+                                Exit Strategies
+                            </h4>
+                            <h5>Sell When It Makes Sense for You</h5>
+
+                            <div class="exit-strategy">
+                                <h4>Exit Immediately at Public Listing</h4>
+                                <p>
+                                    Upon public listing, a new wave of investors will be drawn to the project's credibility, recognizing the early-mover advantage before mass adoption takes hold. They will see the opportunity to become the supply to an inevitable surge in demand from end users—driving token appreciation as fixed supply meets overwhelming demand. As more retailers adopt our payment solution and millions of consumers integrate the token into their daily transactions, the value continues to rise, attracting yet another wave of investors. For Round 2 presale investors, this presents a prime exit strategy—selling into a rapidly growing market at a premium.
+                                </p>
+                            </div>
+
+                            <div class="or-divider">
+                                <span>OR</span>
+                            </div>
+
+                            <div class="exit-strategy">
+                                <h4>
+                                    Capitalize on Long-Term Consumer
+                                    Adoption
+                                </h4>
+                                <p>
+                                    For investors seeking maximum returns, holding onto tokens until consumer adoption peaks presents a lucrative alternative. As we scale, retailers will continue onboarding, each bringing thousands of new repeat buyers into the ecosystem. These consumers will rely on the token for transactions, creating sustained buy pressure on the exchange. This is not a one-time pump—it’s an ongoing, compounding demand cycle. With a fixed supply of just 50 million tokens in circulation, scarcity will drive value higher over time. By selling strategically as demand surges, investors can capitalize on the token’s natural appreciation as millions of end users flood the exchange in search of supply.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center mt-5 mb-5">
+                            <div class="col-lg-8">
+                                <div class="roi-image">
+                                    <img src="assets/img/otherpage/FromTheInvestorsPerspective2.webp"
+                                        alt="Tangi Token Trading on Mobile and Desktop" class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="final-cta">
+                            <h3>Sit Back and Watch It All Unfold</h3>
+                            <p>
+                                Tangi Token isn’t just another investment—it’s a first-mover opportunity in a $33B industry that has no compliant solution until now. The only question is, will you be holding the supply when millions of consumers come looking?
+                            </p>
+                            <a href="#" class="cta-button">Buy Token</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- roi-section-end -->
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer-area -->
+    <footer class="footer__area footer__area-two">
+        <div class="container">
+            <div class="footer__inner-wrap">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright-text">
+                            <p>
+                                Copyright & design by
+                                <a href="https://themeforest.net/user/themeadapt" target="_blank">@Themeadapt</a>
+                                - 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__view-channel">
+                            <span>VIP channel:</span>
+                            <a href="https://web.telegram.org" target="_blank" class="tg-btn">
+                                <img src="assets/img/icons/btn_right_arrow.svg" alt="icon" class="right_arrow" />
+                                <span>
+                                    <img src="assets/img/icons/btn_icon_04.svg" alt="" />
+                                    telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

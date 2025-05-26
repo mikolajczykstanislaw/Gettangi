@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Tangi - Special Thanks to Round 1 Investors</title>
+    <meta name="description"
+        content="A heartfelt thank you to our earliest supporters who believed in Tangi from the beginning" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/default-icons.css" />
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/tg-cursor.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Special Thanks Page Styling */
+
+        /* General Styling */
+        .thanks-section {
+            padding: 120px 0;
+            background-color: #0a0a0a;
+            position: relative;
+        }
+
+        /* Section Title Styling */
+        .thanks-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .thanks-section h3 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .thanks-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        /* Thanks Card Styling */
+        .thanks-card {
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+        }
+
+        .breadcrumb__content {
+            text-align: center;
+        }
+
+        .thanks-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .thanks-card p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .thanks-card p:last-of-type {
+            margin-bottom: 30px;
+        }
+
+        /* Intro Text Styling */
+        .intro-text {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #ffffff;
+            font-weight: 500;
+            max-width: 900px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Image Styling */
+        .thanks-image {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .thanks-image:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.2) 0%,
+                    rgba(75, 89, 245, 0.2) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .thanks-image:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.15) 0%,
+                    rgba(75, 89, 245, 0.15) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .thanks-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Styling */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid #703bff;
+            color: #703bff;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 220px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+
+        .cta-button:hover {
+            color: white;
+        }
+
+        /* Highlight Text Styling */
+        .highlight-text {
+            font-size: 24px;
+            line-height: 1.6;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 600;
+            margin: 40px 0;
+            text-align: center;
+            font-style: italic;
+            position: relative;
+            padding: 30px;
+        }
+
+        .highlight-text:before,
+        .highlight-text:after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 100px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .highlight-text:before {
+            top: 0;
+        }
+
+        .highlight-text:after {
+            bottom: 0;
+        }
+
+        /* Investor Count Styling */
+        .investor-count {
+            font-size: 72px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .investor-count:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+        }
+
+        .investor-label {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        /* Signature Styling */
+        .signature {
+            font-family: "Brush Script MT", cursive;
+            font-size: 42px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: right;
+            margin-top: 40px;
+            line-height: 1;
+        }
+
+        .signature-title {
+            font-size: 16px;
+            color: #ffffff;
+            text-align: right;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        /* Investor Grid - New Addition */
+        .investor-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .investor-badge {
+            background: rgba(112, 59, 255, 0.05);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            border: 1px solid rgba(112, 59, 255, 0.1);
+            transition: all 0.3s ease;
+            width: 150px;
+        }
+
+        .investor-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(112, 59, 255, 0.3);
+        }
+
+        .investor-badge-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(75, 89, 245, 0.05) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .investor-badge-icon i {
+            font-size: 20px;
+            color: #703bff;
+        }
+
+        .investor-badge-title {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 0;
+        }
+
+        /* Thank You Animation - New Addition */
+        .thank-you-animation {
+            position: relative;
+            height: 100px;
+            margin: 50px 0;
+            overflow: hidden;
+        }
+
+        .thank-you-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 5s infinite;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            10% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            90% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+        }
+
+        .thank-you-text:nth-child(2) {
+            animation-delay: 1.25s;
+        }
+
+        .thank-you-text:nth-child(3) {
+            animation-delay: 2.5s;
+        }
+
+        .thank-you-text:nth-child(4) {
+            animation-delay: 3.75s;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb__area .sub-title {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(90deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(22, 37, 97, 0.1) 100%);
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb__area .sub-title svg path {
+            fill: #703bff;
+        }
+
+        .breadcrumb__area .title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 991px) {
+            .thanks-section {
+                padding: 80px 0;
+            }
+
+            .thanks-section h2 {
+                font-size: 32px;
+            }
+
+            .thanks-section h3 {
+                font-size: 26px;
+            }
+
+            .thanks-card {
+                padding: 30px;
+            }
+
+            .highlight-text {
+                font-size: 22px;
+                padding: 25px;
+            }
+
+            .investor-count {
+                font-size: 60px;
+            }
+
+            .investor-label {
+                font-size: 18px;
+            }
+
+            .signature {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .thanks-section h2 {
+                font-size: 28px;
+            }
+
+            .thanks-section h3 {
+                font-size: 24px;
+            }
+
+            .thanks-card {
+                padding: 25px;
+            }
+
+            .highlight-text {
+                font-size: 20px;
+                padding: 20px;
+            }
+
+            .highlight-text:before,
+            .highlight-text:after {
+                width: 80px;
+            }
+
+            .intro-text {
+                font-size: 18px;
+            }
+
+            .investor-count {
+                font-size: 50px;
+            }
+
+            .investor-label {
+                font-size: 16px;
+            }
+
+            .signature {
+                font-size: 32px;
+            }
+
+            .thank-you-text {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .thanks-section h2 {
+                font-size: 26px;
+            }
+
+            .thanks-section h3 {
+                font-size: 22px;
+            }
+
+            .thanks-card {
+                padding: 20px;
+            }
+
+            .highlight-text {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .highlight-text:before,
+            .highlight-text:after {
+                width: 60px;
+            }
+
+            .intro-text {
+                font-size: 16px;
+            }
+
+            .investor-count {
+                font-size: 42px;
+            }
+
+            .investor-label {
+                font-size: 14px;
+            }
+
+            .signature {
+                font-size: 28px;
+            }
+
+            .signature-title {
+                font-size: 14px;
+            }
+
+            .thank-you-text {
+                font-size: 24px;
+            }
+
+            .investor-badge {
+                width: 120px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="header" class="transparent-header">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo">
+                                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="home.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home.html#investment-options-section">The offer</a></li>
+                                            <li><a href="home.html#our-media">Our Media</a></li>
+                                            <li><a href="home.html#features">Features</a></li>
+                                            <li><a href="home.html#roadmap">Roadmap</a></li>
+                                            <li><a href="home.html#faq">FAQ</a></li>
+                                            <li><a href="home.html#contact">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="">Investors Hub</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="the-problem.html">The Problem</a></li>
+                                            <li><a href="our-solution.html">Our Solution</a></li>
+                                            <li><a href="ourpeople.html">Our People</a></li>
+                                            <li><a href="our-partners.html">Our Partners</a></li>
+                                            <li class="menu-item-has-children horizontal-dropdown"><a
+                                                    href="#">Public Listing</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="investment-to-listing.html">Overview</a></li>
+                                                    <li><a href="getting-in-entry-plan.html">Getting In - The Entry
+                                                            Plan</a></li>
+                                                    <li><a href="getting-out-exit-plan.html">Getting Out - The Exit
+                                                            Plan</a></li>
+                                                    <li><a href="hold-for-more-upside.html">Or Hold For More
+                                                            Upside?</a></li>
+                                                    <li><a href="end-users-buy-you-profit.html">End Users Buy, You
+                                                            Profit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="Round_1_Investors_Testimonials.html">Round 1 Investors
+                                                    Testimonials</a></li>
+                                            <li><a href="how-our-solution-works.html">How Our Solution Works</a>
+                                            </li>
+                                            <li><a href="investor-highlight-reel.html">Investor Highlight Reel</a>
+                                            </li>
+                                            <li><a href="market-entry-strategy.html">Market Entry Strategy</a></li>
+                                            <li><a href="market-potential.html">Market Potential</a></li>
+                                            <li><a href="tangi-tokenomics.html">Tangi Tokenomics</a></li>
+                                            <li><a href="legal-landscape.html">Legal Landscape</a></li>
+                                            <li><a href="our-story.html">Our Story</a></li>
+                                            <li class="active"><a href="special-thanks.html">Round 1 Members, Thank You!</a></li>
+                                            <li><a href="tangi-roadmap.html">Our Past, Present & Future</a></li>
+                                            <li><a href="mitigating-risk-factors.html">Mitigating Risk Factors</a>
+                                            </li>
+                                            <li><a href="risk-warning.html">Risk Warning for Investors</a></li>
+                                            <li><a href="potential-roi.html">The Potential ROI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://t.me/GetTangiToken" class="section-link">Connect To
+                                            Investors </a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <li class="header-btn">
+                                        <a href="./coming_soon_page.html" class="tg-btn">
+                                            <img src="assets/img/icons/btn_right_arrow.svg" alt="icon"
+                                                class="right_arrow">
+                                            <span>
+                                                <img src="assets/img/icons/btn_icon.svg" alt="">
+                                                Buy Token
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+            <div class="nav-logo">
+                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tgmobile__menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="https://t.me/GetTangiTokentelegram" title="Telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@tangicrypto170" title="YouTube" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://twitter.com/gettangi?s=21" title="X (Twitter)" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512"
+                                fill="currentColor">
+                                <path
+                                    d="M370.6 32H471L305.4 241.4 504 480H351.6L234.4 328.8 99.4 480H0L179.2 256 0 32h157.6l104.8 130.4L370.6 32z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://discord.gg/Ff7ehSTf" title="Discord" target="_blank"><i
+                                class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <!-- header-search -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search__wrapper">
+                        <div class="search__close">
+                            <button type="button" class="search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type keywords here">
+                                    <span class="search-focus-border"></span>
+                                    <button>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup-overlay"></div>
+    <!-- header-search-end -->
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area">
+            <div class="breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.png"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb__content">
+                            <h1 class="title">
+                                Special Thanks to Round 1 Investors
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- thanks-section -->
+        <section class="thanks-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="thanks-image">
+                            <img src="assets/img/otherpage/SpecialThanks.webp"
+                                alt="Tangi Investor with Shopping Bag and Payment Card" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="thanks-card">
+                            <p>
+                                We want to take a moment to offer our deepest thanks to the 2,500 investors who have been with us from the very beginning. Your unwavering support, patience, and commitment have been nothing short of extraordinary, and it is because of you that we are where we are today.
+                            </p>
+
+                            <p>
+                                When we started, we were no more than a concept—a vision of what could be. You didn’t just invest capital; you believed in our mission, in our potential, and in the people behind the project. You backed us when we had no proof of success, and you absorbed the initial risks, knowing full well that there were no guarantees.
+                            </p>
+
+                            <p>
+                                There was no blueprint for what we were trying to achieve, and when we pivoted, it wasn’t easy. We had to change our strategy at a pivotal time, and you stood by us. We know it was a challenging moment. It was a risk for you as investors, and yet you stayed patient, understanding, and supportive. You showed incredible flexibility and tolerance when we were forced to throw a curveball and stall while we redefined the future direction of the project.
+                            </p>
+
+                            <p>
+                                Throughout it all, you held us to account. You kept us grounded and committed to our mission. You raised valid questions, voiced concerns, and shared your perspectives—always with the best interests of the project and fellow investors in mind. The level of integrity and accountability you’ve brought to this journey has been invaluable.
+                            </p>
+
+                            <p>
+                                You’ve also supported the newest members of the community—offering a steady hand and encouragement to those who joined after you. You’ve understood that we’re all in this together, and your continued support for the new round of investors has been instrumental in fostering a strong, thriving community.
+                            </p>
+
+                            <p>
+                                We acknowledge that you endured significant time loss while your capital was tied up during this early phase of the project. But despite the waiting, you stood firm. You believed in us, and your belief has been rewarded with the progress we’ve made so far.
+                            </p>
+                        </div>
+
+                        <div class="thanks-card">
+                            <p>
+                                We are truly fortunate to have had you by our side, and we want you to know that every success we achieve from here on out is built on the foundation you helped us lay. The future is bright, and it’s thanks to you that we’ve been able to overcome the many obstacles we’ve faced.
+                            </p>
+                            
+                            <p>
+                                As we move forward, know that your support has been vital in making this project what it is today. From the bottom of our hearts, thank you. We will continue to work tirelessly to ensure that your trust in us is well-placed and that we deliver the success you’ve so rightly earned.
+                            </p>
+
+                            <p>
+                                Here’s to the journey ahead, and to you—the incredible Round 1 investors who made it all possible.
+                            </p>
+
+                            <div class="text-center">
+                                <a href="#" class="cta-button">Buy Token</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- thanks-section-end -->
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer-area -->
+    <footer class="footer__area footer__area-two">
+        <div class="container">
+            <div class="footer__inner-wrap">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright-text">
+                            <p>
+                                Copyright & design by
+                                <a href="https://themeforest.net/user/themeadapt" target="_blank">@Themeadapt</a>
+                                - 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__view-channel">
+                            <span>VIP channel:</span>
+                            <a href="https://web.telegram.org" target="_blank" class="tg-btn">
+                                <img src="assets/img/icons/btn_right_arrow.svg" alt="icon" class="right_arrow" />
+                                <span>
+                                    <img src="assets/img/icons/btn_icon_04.svg" alt="" />
+                                    telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

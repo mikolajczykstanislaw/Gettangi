@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Tangi - Why Tangi is the Smart Investment Choice</title>
+    <meta name="description" content="Discover why Tangi is the perfect opportunity for your investment portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/default-icons.css" />
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/tg-cursor.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Investor Highlight Reel Page Styling */
+
+        /* General Styling */
+        .investment-section {
+            padding: 120px 0;
+            background-color: #0a0a0a;
+            position: relative;
+        }
+
+        /* Section Title Styling */
+        .investment-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .investment-section h3 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .investment-section h4 {
+            font-size: 22px;
+            color: #703bff;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .investment-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Investment Point Styling */
+        .investment-point {
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        .investment-point:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .investment-point h4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .investment-point p {
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .col-lg-12 {
+            text-align: center;
+        }
+
+        /* Point Number Styling */
+        .point-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: 600;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Intro Text Styling */
+        .intro-text {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #ffffff;
+            font-weight: 500;
+            max-width: 900px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .breadcrumb__content {
+            text-align: center;
+        }
+
+        .breadcrumb__content .title {
+            text-align: center;
+        }
+
+        /* Image Styling */
+        .investment-image {
+            text-align: center;
+            margin: 40px auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .investment-image:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.2) 0%,
+                    rgba(75, 89, 245, 0.2) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .investment-image:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.15) 0%,
+                    rgba(75, 89, 245, 0.15) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .investment-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Conclusion Styling */
+        .conclusion {
+            background: rgba(112, 59, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        .conclusion h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .conclusion p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        /* Button Styling */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid #703bff;
+            color: #703bff;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 220px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .cta-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: white;
+        }
+
+        .cta-button:hover:before {
+            width: 100%;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb__area .sub-title {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(90deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(22, 37, 97, 0.1) 100%);
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb__area .sub-title svg path {
+            fill: #703bff;
+        }
+
+        .breadcrumb__area .title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: center;
+        }
+
+        /* Highlight Box - New Addition */
+        .highlight-box {
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(75, 89, 245, 0.05) 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 50px auto;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .highlight-box:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom,
+                    #703bff 0%,
+                    #4b59f5 100%);
+        }
+
+        .highlight-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .highlight-box p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        /* Center all rows and content */
+        .row {
+            justify-content: center;
+        }
+
+        .intro-row {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .intro-row .col-lg-12 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Center footer content */
+        .footer__area {
+            text-align: center;
+        }
+
+        .footer__inner-wrap .row {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .copyright-text {
+            text-align: center;
+        }
+
+        .footer__view-channel {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 991px) {
+            .investment-section {
+                padding: 80px 0;
+            }
+
+            .investment-section h2 {
+                font-size: 32px;
+            }
+
+            .investment-section h3 {
+                font-size: 26px;
+            }
+
+            .investment-point {
+                padding: 30px;
+                margin-bottom: 25px;
+            }
+
+            .conclusion {
+                padding: 30px;
+                margin-top: 40px;
+            }
+
+            .conclusion h3 {
+                font-size: 28px;
+            }
+
+            .footer__view-channel {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .investment-section h2 {
+                font-size: 28px;
+            }
+
+            .investment-section h3 {
+                font-size: 24px;
+            }
+
+            .investment-point {
+                padding: 25px;
+                margin-bottom: 20px;
+            }
+
+            .investment-point h4 {
+                font-size: 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .point-number {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .intro-text {
+                font-size: 16px;
+            }
+
+            .conclusion {
+                padding: 25px;
+                margin-top: 30px;
+            }
+
+            .conclusion h3 {
+                font-size: 24px;
+            }
+
+            .conclusion p {
+                font-size: 16px;
+            }
+
+            .highlight-box {
+                padding: 25px;
+                margin: 30px auto;
+            }
+
+            .breadcrumb__area .title {
+                font-size: 32px;
+            }
+
+            .footer__view-channel {
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .investment-section h2 {
+                font-size: 26px;
+            }
+
+            .investment-section h3 {
+                font-size: 22px;
+            }
+
+            .investment-point {
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+
+            .investment-point h4 {
+                font-size: 18px;
+            }
+
+            .point-number {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+
+            .conclusion {
+                padding: 20px;
+                margin-top: 25px;
+            }
+
+            .conclusion h3 {
+                font-size: 22px;
+            }
+
+            .highlight-box {
+                padding: 20px;
+                margin: 25px auto;
+            }
+
+            .breadcrumb__area .title {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                min-width: 180px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="header" class="transparent-header">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo">
+                                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="home.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home.html#investment-options-section">The offer</a></li>
+                                            <li><a href="home.html#our-media">Our Media</a></li>
+                                            <li><a href="home.html#features">Features</a></li>
+                                            <li><a href="home.html#roadmap">Roadmap</a></li>
+                                            <li><a href="home.html#faq">FAQ</a></li>
+                                            <li><a href="home.html#contact">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="">Investors Hub</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="the-problem.html">The Problem</a></li>
+                                            <li><a href="our-solution.html">Our Solution</a></li>
+                                            <li><a href="ourpeople.html">Our People</a></li>
+                                            <li><a href="our-partners.html">Our Partners</a></li>
+                                            <li class="menu-item-has-children horizontal-dropdown"><a
+                                                    href="#">Public Listing</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="investment-to-listing.html">Overview</a></li>
+                                                    <li><a href="getting-in-entry-plan.html">Getting In - The Entry
+                                                            Plan</a></li>
+                                                    <li><a href="getting-out-exit-plan.html">Getting Out - The Exit
+                                                            Plan</a></li>
+                                                    <li><a href="hold-for-more-upside.html">Or Hold For More
+                                                            Upside?</a></li>
+                                                    <li><a href="end-users-buy-you-profit.html">End Users Buy, You
+                                                            Profit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="Round_1_Investors_Testimonials.html">Round 1 Investors
+                                                    Testimonials</a></li>
+                                            <li><a href="how-our-solution-works.html">How Our Solution Works</a>
+                                            </li>
+                                            <li class="active"><a href="investor-highlight-reel.html">Investor Highlight Reel</a>
+                                            </li>
+                                            <li><a href="market-entry-strategy.html">Market Entry Strategy</a></li>
+                                            <li><a href="market-potential.html">Market Potential</a></li>
+                                            <li><a href="tangi-tokenomics.html">Tangi Tokenomics</a></li>
+                                            <li><a href="legal-landscape.html">Legal Landscape</a></li>
+                                            <li><a href="our-story.html">Our Story</a></li>
+                                            <li><a href="special-thanks.html">Round 1 Members, Thank You!</a></li>
+                                            <li><a href="tangi-roadmap.html">Our Past, Present & Future</a></li>
+                                            <li><a href="mitigating-risk-factors.html">Mitigating Risk Factors</a>
+                                            </li>
+                                            <li><a href="risk-warning.html">Risk Warning for Investors</a></li>
+                                            <li><a href="potential-roi.html">The Potential ROI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://t.me/GetTangiToken" class="section-link">Connect To
+                                            Investors </a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <li class="header-btn">
+                                        <a href="./coming_soon_page.html" class="tg-btn">
+                                            <img src="assets/img/icons/btn_right_arrow.svg" alt="icon"
+                                                class="right_arrow">
+                                            <span>
+                                                <img src="assets/img/icons/btn_icon.svg" alt="">
+                                                Buy Token
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+            <div class="nav-logo">
+                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tgmobile__menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="https://t.me/GetTangiTokentelegram" title="Telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@tangicrypto170" title="YouTube" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://twitter.com/gettangi?s=21" title="X (Twitter)" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512"
+                                fill="currentColor">
+                                <path
+                                    d="M370.6 32H471L305.4 241.4 504 480H351.6L234.4 328.8 99.4 480H0L179.2 256 0 32h157.6l104.8 130.4L370.6 32z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://discord.gg/Ff7ehSTf" title="Discord" target="_blank"><i
+                                class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <!-- header-search -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search__wrapper">
+                        <div class="search__close">
+                            <button type="button" class="search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type keywords here">
+                                    <span class="search-focus-border"></span>
+                                    <button>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup-overlay"></div>
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area">
+            <div class="breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.png"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="breadcrumb__content text-center">
+                            <h1 class="title">
+                                Why Tangi is the Smart Investment Choice
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- investment-section -->
+        <section class="investment-section">
+            <div class="container">
+                <div class="row intro-row justify-content-center">
+                    <div class="col-lg-10">
+                        <p class="intro-text">
+                            Welcome to the Tangi Investor Highlight Reel, where we’ve distilled all the key advantages and investor-centric factors that make Tangi the perfect opportunity for your portfolio. We’ve done the hard work, and now it’s time for you to benefit.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="investment-image">
+                            <img src="assets/img/otherpage/InvestorHighlightReel.webp"
+                                alt="Tangi Payment Card and Terminal" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">1</span>
+                                First-Mover Advantage in a $33B Market
+                            </h4>
+                            <p>
+                                Tangi is the first to crack the code of cannabis payments with a fully compliant, transparent, and cost-effective payment solution. With 60 million potential consumers and 8,000 retailers in need of our services, we’re entering a $33 billion market that is practically untapped by compliant providers. As an investor, you’re getting in at the ground level of a market poised for rapid growth. This is not speculation — it’s a real, growing industry with a massive, underserved customer base.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">2</span> The
+                                Token: Core of the Solution
+                            </h4>
+                            <p>
+                                At the core of Tangi’s innovative solution is the token. While our payment system includes traditional bank-integrated payment methods, the Tangi token is where the real value lies. Our token offers the most rewarding, cost-effective option for consumers and retailers alike, and its adoption is central to our business model. Every decision we’ve made has been to ensure the token becomes the preferred payment method, driving its value and increasing its utility. When the token publicly lists, demand will already be there, driven by real-world usage and growing adoption — not just speculation.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">3</span> Limited
+                                Token Supply: Demand and Supply
+                            </h4>
+                            <p>
+                                Tangi has a maximum supply of 250 million tokens; upon public listing, there will be a limited circulating supply of only 50 million tokens. You and your fellow presale investors will control the entire circulating supply initially, with demand coming from up to 60 million end users, fuelled by $33B in transactional volume. With the supply so limited, the demand for the token has the potential to drive significant value and returns for early investors. As the market captures even a small percentage of the cannabis industry, the token value will inevitably rise. The math speaks for itself — the more market share we capture, the more valuable your tokens become.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">4</span> Secured
+                                Banking Relationship — The Key to Success
+                            </h4>
+                            <p>
+                                What makes Tangi unique — and what makes it so investable — is our secured banking relationship. This has been the roadblock for every other payment provider in the cannabis space. Banks have refused to service the cannabis industry, leaving retailers and consumers without reliable, compliant payment solutions. Tangi is different. We’ve secured a partnership with a forward-thinking bank, giving us the ability to operate legally and offer compliant payment services. No other provider has managed this, which gives us an unmatched competitive advantage and makes Tangi the first legitimate solution in the market.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">5</span> Proven
+                                Adoption Model for Seamless Growth
+                            </h4>
+                            <p>
+                                Our approach to capturing consumers and retailers is designed for mass adoption. By offering free services and advertising initially through our Cannabis Superstore, we naturally attract retailers and their customers, sparking curiosity about how we can offer legal payment solutions. This organic approach to acquisition eliminates hard-selling and builds trust — the foundation of lasting relationships. As consumers and retailers transition from cash to token, we are setting the stage for widespread adoption and growing demand.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">6</span> Seamless
+                                Transition to Token Payments
+                            </h4>
+                            <p>
+                                The token is the most rewarding and cost-effective payment option, providing discounts, loyalty points, and exclusive benefits for consumers. Retailers save on transaction fees while offering an engaging rewards program to their customers. Everyone in the transaction chain benefits, from consumers to retailers to Tangi itself. This creates an ecosystem where the token naturally becomes the go-to payment method.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">7</span> Scaling
+                                with Speed — Positioned for Mass Adoption
+                            </h4>
+                            <p>
+                                We expect to capture a large portion of the market very quickly, which will drive token adoption, increase value, and make our token the primary payment method for cannabis purchases across the country. The speed of growth is already built into our strategy, and with no competition in the compliance space, our progress will be swift.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">8</span>
+                                Transparent and Independent
+                            </h4>
+                            <p>
+                                Tangi is built on transparency and credibility. We’ve been featured in independent journalism from reputable sources and industry publications, and we’re supported by 2,500 existing investors who have been with us since Round 1. The project is not reliant on paid endorsements or celebrity backing. Our success comes from our legitimate, transparent, and scalable business model. We’re here to give you the facts, and they speak for themselves.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">9</span> Real
+                                Utility and Market Dominance
+                            </h4>
+                            <p>
+                                The cannabis industry has long been underserved when it comes to compliant payment options. Tangi has solved this problem, and now, with the ability to offer both traditional payment methods and the token option, we are well-positioned to dominate the market. The demand is already here — consumers and retailers are eagerly waiting for a compliant solution that offers transparency, reliability, and affordability. By getting in now, you’re securing your stake in a market-leading project with real utility, massive potential for growth, and an established customer base that will drive token demand when it lists publicly.
+                            </p>
+                        </div>
+
+                        <div class="investment-point">
+                            <h4>
+                                <span class="point-number">10</span> The
+                                Exit Strategy — Maximizing ROI
+                            </h4>
+                            <p>
+                                When the token publicly lists, the demand will already be there. With up to 60 million potential end users and 8,000 retailers needing our services, you’re not investing in a speculative token with an unknown future. You will potentially be able to sell your tokens to a market that needs them — driven by real utility and not just speculation. With only 50 million tokens in circulation, the potential for massive returns on investment is clear.
+                            </p>
+                        </div>
+
+                        <div class="conclusion">
+                            <h3>Conclusion:</h3>
+                            <p>
+                                With first-mover advantage, a secure banking relationship, and a token that is at the core of a revolutionary payment solution, this is a project that ticks all the boxes. The market is ripe for disruption, and Tangi is already in the driver’s seat. By investing in Round 2, you are positioning yourself for tremendous growth and ROI. The future of cannabis payments is here, and it’s built on the token. Don’t miss out on your chance to be part of it.
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="cta-button">Buy Token</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- investment-section-end -->
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer-area -->
+    <footer class="footer__area footer__area-two">
+        <div class="container">
+            <div class="footer__inner-wrap">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-6">
+                        <div class="copyright-text text-center">
+                            <p>
+                                Copyright & design by
+                                <a href="https://themeforest.net/user/themeadapt" target="_blank">@Themeadapt</a>
+                                - 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__view-channel text-center">
+                            <span>VIP channel:</span>
+                            <a href="https://web.telegram.org" target="_blank" class="tg-btn">
+                                <img src="assets/img/icons/btn_right_arrow.svg" alt="icon" class="right_arrow" />
+                                <span>
+                                    <img src="assets/img/icons/btn_icon_04.svg" alt="" />
+                                    telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1152 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ironik - ICO & Crypto Landing Page Template</title>
+    <meta name="description" content="Ironik - ICO & Crypto Landing Page Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/default-icons.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/tg-cursor.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Custom styles for Our People section */
+        .team-member-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .team-member-item {
+            text-align: center;
+            padding: 30px 15px;
+            transition: all 0.3s ease;
+            height: 100%;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .team-member-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member-role {
+            color: #6c757d;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .team-member-name {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        .visit-profile-btn {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 15px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .visit-profile-btn:hover {
+            background-color: #0b5ed7;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        /* Modal styles */
+        .team-modal .modal-content {
+            border-radius: 15px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-modal .modal-header {
+            border-bottom: none;
+            padding: 20px 20px 0;
+        }
+
+        .team-modal .modal-body {
+            padding: 20px 30px 30px;
+        }
+
+        .team-modal-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 25px;
+            display: block;
+            border: 5px solid #f0f0f0;
+        }
+
+        .team-modal-name {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #212529;
+            text-align: center;
+        }
+
+        .team-modal-role {
+            color: #6c757d;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+        }
+
+        .team-modal-bio {
+            margin-bottom: 25px;
+            line-height: 1.8;
+            color: #343a40;
+        }
+
+        .team-modal-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .team-modal-info h5 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+
+        .team-modal-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .team-modal-info ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .team-modal-info ul li i {
+            margin-right: 10px;
+            color: #0d6efd;
+            width: 20px;
+        }
+
+        .team-modal-social {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .breadcrumb__content {
+            text-align: center;
+        }
+
+        .team-modal-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            color: #212529;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .team-modal-social a:hover {
+            background-color: #0d6efd;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Fix for mt-4 visibility - ensure all headings and text are visible */
+        .mt-4, 
+        .team-modal-bio h5,
+        .team-modal-bio .mt-4,
+        .modal-body h5,
+        .modal-body .mt-4 {
+            color: #212529 !important;
+            font-weight: 600;
+        }
+
+        /* Ensure all paragraph text in modals is visible */
+        .team-modal-bio p,
+        .modal-body p {
+            color: #343a40 !important;
+        }
+
+        /* Ensure list items are visible */
+        .team-modal-bio ul li,
+        .modal-body ul li {
+            color: #343a40 !important;
+        }
+
+        /* Ensure strong text is visible */
+        .team-modal-bio strong,
+        .modal-body strong {
+            color: #212529 !important;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="header" class="transparent-header">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo">
+                                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="home.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home.html#investment-options-section">The offer</a></li>
+                                            <li><a href="home.html#our-media">Our Media</a></li>
+                                            <li><a href="home.html#features">Features</a></li>
+                                            <li><a href="home.html#roadmap">Roadmap</a></li>
+                                            <li><a href="home.html#faq">FAQ</a></li>
+                                            <li><a href="home.html#contact">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="">Investors Hub</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="the-problem.html">The Problem</a></li>
+                                            <li><a href="our-solution.html">Our Solution</a></li>
+                                            <li class="active"><a href="ourpeople.html">Our People</a></li>
+                                            <li><a href="our-partners.html">Our Partners</a></li>
+                                            <li class="menu-item-has-children horizontal-dropdown"><a
+                                                    href="#">Public Listing</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="investment-to-listing.html">Overview</a></li>
+                                                    <li><a href="getting-in-entry-plan.html">Getting In - The Entry
+                                                            Plan</a></li>
+                                                    <li><a href="getting-out-exit-plan.html">Getting Out - The Exit
+                                                            Plan</a></li>
+                                                    <li><a href="hold-for-more-upside.html">Or Hold For More
+                                                            Upside?</a></li>
+                                                    <li><a href="end-users-buy-you-profit.html">End Users Buy, You
+                                                            Profit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="Round_1_Investors_Testimonials.html">Round 1 Investors
+                                                    Testimonials</a></li>
+                                            <li><a href="how-our-solution-works.html">How Our Solution Works</a>
+                                            </li>
+                                            <li><a href="investor-highlight-reel.html">Investor Highlight Reel</a>
+                                            </li>
+                                            <li><a href="market-entry-strategy.html">Market Entry Strategy</a></li>
+                                            <li><a href="market-potential.html">Market Potential</a></li>
+                                            <li><a href="tangi-tokenomics.html">Tangi Tokenomics</a></li>
+                                            <li><a href="legal-landscape.html">Legal Landscape</a></li>
+                                            <li><a href="our-story.html">Our Story</a></li>
+                                            <li><a href="special-thanks.html">Round 1 Members, Thank You!</a></li>
+                                            <li><a href="tangi-roadmap.html">Our Past, Present & Future</a></li>
+                                            <li><a href="mitigating-risk-factors.html">Mitigating Risk Factors</a>
+                                            </li>
+                                            <li><a href="risk-warning.html">Risk Warning for Investors</a></li>
+                                            <li><a href="potential-roi.html">The Potential ROI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://t.me/GetTangiToken" class="section-link">Connect To
+                                            Investors </a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <li class="header-btn">
+                                        <a href="./coming_soon_page.html" class="tg-btn">
+                                            <img src="assets/img/icons/btn_right_arrow.svg" alt="icon"
+                                                class="right_arrow">
+                                            <span>
+                                                <img src="assets/img/icons/btn_icon.svg" alt="">
+                                                Buy Token
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+            <div class="nav-logo">
+                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tgmobile__menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="https://t.me/GetTangiTokentelegram" title="Telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@tangicrypto170" title="YouTube" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://twitter.com/gettangi?s=21" title="X (Twitter)" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512"
+                                fill="currentColor">
+                                <path
+                                    d="M370.6 32H471L305.4 241.4 504 480H351.6L234.4 328.8 99.4 480H0L179.2 256 0 32h157.6l104.8 130.4L370.6 32z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://discord.gg/Ff7ehSTf" title="Discord" target="_blank"><i
+                                class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <!-- header-search -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search__wrapper">
+                        <div class="search__close">
+                            <button type="button" class="search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type keywords here">
+                                    <span class="search-focus-border"></span>
+                                    <button>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup-overlay"></div>
+    <!-- header-search-end -->
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area">
+            <div class="breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.png"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb__content">
+                            <h1 class="title">Meet Our People</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- team-members-area -->
+        <section class="team-members-area section-pb-120">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>The Talented People Behind Our Success</h2>
+                            <p>Meet our exceptional team of professionals who drive innovation and excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/Brian-Cowen-Advisor.png" alt="Brian Cowen"
+                                class="team-member-img">
+                            <h3 class="team-member-name">Brian Cowen</h3>
+                            <span class="team-member-role">FORMER PRIME MINISTER OF IRELAND</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal1">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/ron profile image.jpg" alt="Ron Strauss"
+                                class="team-member-img">
+                            <h3 class="team-member-name">Ron Strauss</h3>
+                            <span class="team-member-role">CEO</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal2">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/Zach-Fuentes.png" alt="Zach Fuentes" class="team-member-img">
+                            <h3 class="team-member-name">Zach Fuentes</h3>
+                            <span class="team-member-role">FORMER WHITE HOUSE DEPUTY CHIEF OF STAFF</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal3">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/Michael-Taggart-Advisor.png" alt="Michael Taggart"
+                                class="team-member-img">
+                            <h3 class="team-member-name">Michael Taggart</h3>
+                            <span class="team-member-role">FOUNDER OF BITSHARES</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal4">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/Stan-Larimer.png" alt="Stan Larimer" class="team-member-img">
+                            <h3 class="team-member-name">Stan Larimer</h3>
+                            <span class="team-member-role">FOUNDER OF BITSHARES AND CRYPTONOMEX</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal5">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/John-Hourican-CFO.png" alt="John Hourican"
+                                class="team-member-img">
+                            <h3 class="team-member-name">John Hourican</h3>
+                            <span class="team-member-role">ADVISOR</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal6">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/our people page Sprengel-200x200.webp"
+                                alt="Dr. Henrik Sprengel" class="team-member-img">
+                            <h3 class="team-member-name">Dr. Henrik Sprengel</h3>
+                            <span class="team-member-role">Senior Director, Cannabis Industry Strategy & Regulatory
+                                Affairs</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal7">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/our people Yash image.webp" alt="Yash Shekhawat"
+                                class="team-member-img">
+                            <h3 class="team-member-name">Yash Shekhawat</h3>
+                            <span class="team-member-role">Chief Technology Officer (CTO)</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal8">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/our people page Holger-Sprengel.webp"
+                                alt="Dr. Holger Sprengel" class="team-member-img">
+                            <h3 class="team-member-name">Dr. Holger Sprengel</h3>
+                            <span class="team-member-role">Entrepreneur And Investor</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal9">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item">
+                            <img src="assets/img/ourpeople/ou people page  pritesh.webp" alt="Dr. Pritesh Kumar"
+                                class="team-member-img">
+                            <h3 class="team-member-name">Dr. Pritesh Kumar</h3>
+                            <span class="team-member-role">CANNABIS SCIENCE & TECHNOLOGY LIAISON</span>
+                            <button type="button" class="visit-profile-btn" data-bs-toggle="modal"
+                                data-bs-target="#teamModal10">
+                                Visit Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- team-members-area-end -->
+
+    </main>
+    <!-- main-area-end -->
+
+    <!-- Team Member Modals -->
+    <!-- Modal 1 - Brian Cowen -->
+    <div class="modal fade team-modal" id="teamModal1" tabindex="-1" aria-labelledby="teamModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/Brian-Cowen-Advisor.png" alt="Brian Cowen" class="team-modal-img">
+                    <h2 class="team-modal-name">Brian Cowen</h2>
+                    <span class="team-modal-role">FORMER PRIME MINISTER OF IRELAND</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are incredibly fortunate to have Brian Cowen, former Taoiseach (Prime Minister) of
+                            Ireland, as part of our team. With a distinguished career in politics, economics, and
+                            governance, Brian brings an unparalleled level of experience, leadership, and strategic
+                            insight to our project.</p>
+                        <p>As Ireland's 11th Taoiseach (2008-2011), Brian led the country through one of the most
+                            challenging economic periods in modern history, navigating complex financial landscapes with
+                            resilience and determination. Prior to that, he served as Minister for Finance, where he
+                            played a pivotal role in shaping Ireland's economic policies. His career also includes key
+                            ministerial positions in Foreign Affairs, Health, and Transport, demonstrating his
+                            versatility and depth of expertise in managing large-scale national and international
+                            initiatives.</p>
+                        <p>Having overseen high-level economic policy and financial regulation at the highest levels of
+                            government, Brian's experience is invaluable as we drive our mission forward. His insights
+                            into global financial systems, regulatory frameworks, and economic development provide us
+                            with a competitive edge as we scale our operations and cement our place as a leader in the
+                            market.</p>
+                        <p>With Brian Cowen on board, we are backed by world-class expertise that will help shape our
+                            strategy, navigate regulatory landscapes, and ensure long-term success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 - Ron Strauss -->
+    <div class="modal fade team-modal" id="teamModal2" tabindex="-1" aria-labelledby="teamModalLabel2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/ron profile image.jpg" alt="Ron Strauss" class="team-modal-img">
+                    <h2 class="team-modal-name">Ron Strauss</h2>
+                    <span class="team-modal-role">VISIONARY ENTREPRENEUR & CEO OF TANGI</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are privileged to have Ron Strauss leading Tangi as CEO, bringing over 20 years of experience in founding and scaling high-tech startups. As a serial entrepreneur, Ron has built and exited multiple successful companies across automation, imaging, and embedded computing industries. His proven track record of innovation, leadership, and business acumen makes him the perfect driving force behind Tangi's mission to revolutionize payment solutions in the cannabis sector.</p>
+
+                        <h5 class="mt-4">Career Highlights & Successful Exits</h5>
+                        <p>Founder & CEO of Focus Automation Systems Inc. – A leader in industrial automation, Focus
+                            later spun out Mitra Imaging Inc., which was acquired by Agfa-Gevaert, and Focus Systems,
+                            which was acquired by V Technology Corporation.</p>
+                        <p>Founder & CEO of Avida Systems – A major supplier of embedded computing technology for
+                            military, telecom, and transportation industries, ultimately acquired by General Electric.
+                        </p>
+                        <p>Vice President & Business Development Director, General Electric – After the Avida
+                            acquisition, Ron spent five years leading GE's international embedded computing business,
+                            expanding its global footprint.</p>
+
+                        <h5 class="mt-4">Academic & Global Business Expertise</h5>
+                        <p>Ron holds a Computer Systems Engineering degree and has furthered his expertise through
+                            executive training at Harvard University, the GE Jack Welch Management Training Centre, and
+                            the University of Waterloo. With international experience, including studies at Beijing
+                            Sinoland College, Ron speaks intermediate-level Mandarin Chinese, equipping him with a
+                            global business perspective that has been instrumental in securing strategic partnerships.
+                        </p>
+
+                        <h5 class="mt-4">A Personal Mission: Advocacy & Resilience</h5>
+                        <p>Ron is a brain cancer survivor, and his personal journey has fueled his commitment to
+                            advancing medical cannabis accessibility. He actively supports cancer research programs and
+                            initiatives for children with epilepsy, advocating for alternative medical solutions and
+                            broader industry acceptance.</p>
+
+                        <p>Leadership at Tangi: Bringing Compliance & Innovation to Cannabis Payments With Ron at the helm, Tangi is set to disrupt the cannabis payment industry with the first-ever bank-backed, compliant solution. His expertise in scaling businesses, securing acquisitions, and navigating complex regulatory environments ensures that Tangi is positioned for mass adoption and long-term success.</p>
+                        <p>As Tangi rolls out its groundbreaking payment platform, Ron’s visionary leadership will guide the company toward dominating the cannabis payments market—offering investors an opportunity to be part of one of the most transformative financial solutions in the industry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 - Zach Fuentes -->
+    <div class="modal fade team-modal" id="teamModal3" tabindex="-1" aria-labelledby="teamModalLabel3"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/Zach-Fuentes.png" alt="Zach Fuentes" class="team-modal-img">
+                    <h2 class="team-modal-name">Zach Fuentes</h2>
+                    <span class="team-modal-role">FORMER WHITE HOUSE DEPUTY CHIEF OF STAFF</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are privileged to have Zach Fuentes, former White House Deputy Chief of Staff, as part of
+                            our leadership team. With a distinguished career at the highest levels of government and
+                            strategic operations, Zach brings an exceptional depth of expertise in executive leadership,
+                            crisis management, and high-stakes decision-making—an invaluable asset as we scale our
+                            project.</p>
+
+                        <p>Serving as Deputy Chief of Staff to President Donald Trump, Zach was a key figure in the
+                            White House, managing critical operations, overseeing policy execution, and coordinating
+                            strategic initiatives at the federal level. His experience extends beyond politics, as he
+                            has advised top-tier organizations on risk management, regulatory navigation, and business
+                            strategy, ensuring long-term stability and success in complex environments.</p>
+
+                        <p>Zach's deep understanding of government relations, compliance, and large-scale operational
+                            execution makes him an indispensable force in helping us navigate regulatory landscapes,
+                            forge strategic partnerships, and position our project for dominance in the industry.</p>
+
+                        <p>His involvement is a powerful endorsement of our mission—backing us with elite-level
+                            strategy, regulatory insight, and leadership that will drive our project toward global
+                            success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 - Michael Taggart -->
+    <div class="modal fade team-modal" id="teamModal4" tabindex="-1" aria-labelledby="teamModalLabel4"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/Michael-Taggart-Advisor.png" alt="Michael Taggart"
+                        class="team-modal-img">
+                    <h2 class="team-modal-name">Michael Taggart</h2>
+                    <span class="team-modal-role">BLOCKCHAIN PIONEER & VISIONARY ENTREPRENEUR</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are incredibly fortunate to have Michael Taggart as a key member of the Tangi team. A
+                            renowned blockchain strategist, fintech entrepreneur, and early adopter of decentralized
+                            finance, Michael has been instrumental in shaping the evolution of blockchain technology and
+                            its real-world applications.</p>
+
+                        <p>As a co-founder of BitShares, one of the first and most advanced decentralized exchanges,
+                            Michael played a pivotal role in laying the foundation for modern decentralized finance
+                            (DeFi). His expertise in blockchain development, token economics, and digital ecosystems has
+                            earned him a well-respected reputation among the industry's top innovators.</p>
+
+                        <p>Michael has worked closely with industry titans such as Elon Musk, Charles Hoskinson, and
+                            Peter Thiel, as well as contributing to projects within Microsoft Azure and other global
+                            fintech initiatives. He has also collaborated with his fellow Tangi team member, Stan
+                            Larimer, on multiple blockchain and AI-driven ventures, positioning himself at the forefront
+                            of disruptive financial technologies.</p>
+
+                        <p>His deep knowledge of digital payment solutions, tokenization, and scalable blockchain
+                            applications makes him an invaluable asset to Tangi. With a career built on identifying and
+                            executing next-generation financial solutions, Michael's expertise ensures that Tangi is
+                            designed with long-term sustainability, innovation, and mass adoption in mind.</p>
+
+                        <p>Having played a key role in multiple successful blockchain ventures, Michael's presence on
+                            the Tangi team underscores the strength, credibility, and vision behind our project. His
+                            leadership and technical acumen position us to redefine digital payments, financial
+                            accessibility, and token utility, setting a new benchmark in the industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 - Stan Larimer -->
+    <div class="modal fade team-modal" id="teamModal5" tabindex="-1" aria-labelledby="teamModalLabel5"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/Stan-Larimer.png" alt="Stan Larimer" class="team-modal-img">
+                    <h2 class="team-modal-name">Stan Larimer</h2>
+                    <span class="team-modal-role">AEROSPACE VISIONARY & BLOCKCHAIN PIONEER</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are privileged to have Stan Larimer as a key member of the Tangi leadership team, bringing
+                            a unique blend of expertise in both aerospace engineering and blockchain innovation. With an
+                            impressive career spanning over 40 years as a NASA rocket scientist, Stan has contributed to
+                            some of the most groundbreaking space programs, engineering cutting-edge aerospace
+                            technologies that have shaped modern space exploration.</p>
+
+                        <p>Beyond aerospace, Stan transitioned into the world of blockchain and digital finance, where
+                            he became one of the most influential figures in decentralized technology. As the co-founder
+                            of BitShares, one of the earliest and most revolutionary decentralized exchanges, Stan
+                            played a crucial role in pioneering financial autonomy through blockchain. His deep
+                            understanding of technology and its potential to disrupt traditional industries has made him
+                            a sought-after thought leader in the space.</p>
+
+                        <p>Stan has also worked alongside his fellow Tangi team member, Michael Taggart, on major
+                            blockchain projects, collaborating with some of the most notable names in tech and finance,
+                            including Elon Musk, Charles Hoskinson, Peter Thiel, and Microsoft Azure. His legacy in
+                            blockchain extends to his son, Dan Larimer, who is widely recognized for his contributions
+                            to the space, including the creation of EOS, Steemit, and BitShares. While Dan is not
+                            involved with Tangi, Stan's extensive work on these high-profile projects has firmly
+                            established him as a leading mind in decentralized technology.</p>
+
+                        <p>With a proven track record of innovation in both aerospace and blockchain, Stan brings
+                            invaluable experience, vision, and technical expertise to Tangi. His presence on our team is
+                            a testament to the caliber of leadership driving this project forward, ensuring we remain at
+                            the forefront of technological and financial disruption.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 - John Hourican -->
+    <div class="modal fade team-modal" id="teamModal6" tabindex="-1" aria-labelledby="teamModalLabel6"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/John-Hourican-CFO.png" alt="John Hourican" class="team-modal-img">
+                    <h2 class="team-modal-name">John Hourican</h2>
+                    <span class="team-modal-role">A LEGACY OF LEADERSHIP AND FINANCIAL ACUMEN</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are honored to have John Hourican as part of our leadership team, bringing decades of
+                            executive experience in corporate finance, strategic management, and large-scale operations.
+                            As the former Managing Director and Finance Director of Bord na Móna, John played a pivotal
+                            role in steering one of Ireland's most significant semi-state enterprises, overseeing
+                            critical financial and operational strategies during a transformative period for the
+                            company.</p>
+
+                        <p>During his tenure, John worked under the administration of then-Taoiseach Brian Cowen,
+                            further cementing his position as a trusted leader within Ireland's corporate and
+                            governmental landscape. His ability to navigate the complexities of state-backed industries
+                            while maintaining strong financial stewardship has made him a respected figure in business
+                            circles.</p>
+
+                        <p>Beyond his professional achievements, John has fostered a remarkable legacy in finance
+                            through his family. His six children have all pursued successful careers in the financial
+                            sector, with David Hourican serving as CFO at British Business Bank and John Hourican Jr.
+                            holding former high-profile roles as RBS Group Head of Equities and Chairman of the Bank of
+                            Cyprus. While their careers are independent of Tangi, their collective success speaks
+                            volumes about the financial acumen and leadership values that John embodies.</p>
+
+                        <p>John's vast experience in financial oversight, corporate governance, and large-scale project
+                            execution adds immense value to our team. His strategic insights and deep industry knowledge
+                            will help solidify Tangi's position as a dominant force in the market, ensuring financial
+                            discipline and long-term stability as we scale our operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7 - Dr. Henrik Sprengel -->
+    <div class="modal fade team-modal" id="teamModal7" tabindex="-1" aria-labelledby="teamModalLabel7"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/our people page Sprengel-200x200.webp" alt="Dr. Henrik Sprengel"
+                        class="team-modal-img">
+                    <h2 class="team-modal-name">Dr. Henrik Sprengel</h2>
+                    <span class="team-modal-role">ENTREPRENEUR AND PIONEER IN MEDICINAL CANNABIS</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are honored to have Dr. Henrik Sprengel, a seasoned entrepreneur with a Ph.D. in Law, as a
+                            key member of our team. With a robust background in founding and leading over ten companies,
+                            primarily in the digital sector, Dr. Sprengel brings a wealth of experience and innovation
+                            to our organization.</p>
+
+                        <h5 class="mt-4">Professional Highlights</h5>
+                        <ul>
+                            <li><strong>Co-Founder and CEO of Kalapa Clinic:</strong> Established as the first medical
+                                consultancy in Spain and Europe specializing in cannabinoid-based treatments, Kalapa
+                                Clinic has been at the forefront of integrating medical cannabis into therapeutic
+                                practices.</li>
+                            <li><strong>Co-Founder of CanPharma:</strong> Dr. Sprengel co-founded CanPharma, a company
+                                dedicated to advancing medicinal cannabis solutions.</li>
+                            <li><strong>Executive Director at Health House International:</strong> In 2021, Dr. Sprengel
+                                joined Health House International, a global distributor of medicinal cannabis products,
+                                as an Executive Director, further solidifying his influence in the medicinal cannabis
+                                industry.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Educational Background</h5>
+                        <ul>
+                            <li><strong>Ph.D. in Law:</strong> Dr. Sprengel holds a doctoral degree in law, providing
+                                him with a strong foundation in regulatory and compliance matters.</li>
+                            <li><strong>MBA from INSEAD:</strong> He earned an MBA from INSEAD, one of the world's
+                                leading business schools, enhancing his strategic and managerial expertise.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Additional Ventures</h5>
+                        <p><strong>Co-Founder of Espronceda Institute of Art & Culture:</strong> Demonstrating his
+                            commitment to cultural initiatives, Dr. Sprengel co-founded the Espronceda Institute,
+                            fostering art and cultural projects in Barcelona.</p>
+
+                        <h5 class="mt-4">Collaborations and Industry Connections</h5>
+                        <p>Dr. Sprengel's companies have engaged in collaborations with notable U.S. cannabis
+                            entrepreneurs. In the United States, B Noble has partnered with Curaleaf across nine states,
+                            supplying over 100 dispensaries.</p>
+
+                        <h5 class="mt-4">Role at Tangi</h5>
+                        <p>Dr. Sprengel's extensive experience in medicinal cannabis, regulatory frameworks, and
+                            international business development positions him as a pivotal asset to Tangi. His proven
+                            track record in pioneering cannabis-based medical services and products aligns seamlessly
+                            with Tangi's mission to innovate and lead in the cannabis industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8 - Yash Shekhawat -->
+    <div class="modal fade team-modal" id="teamModal8" tabindex="-1" aria-labelledby="teamModalLabel8"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/our people Yash image.webp" alt="Yash Shekhawat"
+                        class="team-modal-img">
+                    <h2 class="team-modal-name">Yash Shekhawat</h2>
+                    <span class="team-modal-role">CHIEF TECHNOLOGY OFFICER (CTO)</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are thrilled to have Yash Shekhawat as the Chief Technology Officer (CTO) of Tangi. Yash
+                            brings a wealth of experience in technology innovation, entrepreneurship, and product
+                            development, making him an invaluable asset to our leadership team.</p>
+
+                        <h5 class="mt-4">Professional Background</h5>
+                        <ul>
+                            <li><strong>Founder of Stoodio.ai:</strong> Yash established Stoodio.ai, a cutting-edge
+                                platform that leverages artificial intelligence to revolutionize content creation in the
+                                fashion industry. His vision has led to collaborations with renowned fashion brands,
+                                showcasing his ability to integrate technology with creative industries.</li>
+
+                            <li><strong>Software Developer at Nurogames GmbH:</strong> In 2016, Yash contributed to
+                                Nurogames GmbH, an independent game development and software engineering company. He
+                                worked on various projects in virtual reality (VR), 5G, and blockchain sectors,
+                                demonstrating his versatility in emerging technologies.</li>
+
+                            <li><strong>Co-Founder of La Vouga and Meta Vouga:</strong> Yash co-founded La Vouga, a
+                                platform dedicated to sustainable fashion, and Meta Vouga, which enables fashion
+                                designers to mint their 3D designs as NFTs for use in metaverses, gaming, or augmented
+                                reality applications. These ventures highlight his commitment to innovation and
+                                sustainability in the fashion tech space.</li>
+
+                            <li><strong>Technical Advisor at Tangi:</strong> Since 2021, Yash has served as a Technical
+                                Advisor and Founding Member at Tangi, providing strategic guidance on integrating
+                                advanced technologies into our payment solutions for the legal cannabis industry.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Educational Background</h5>
+                        <ul>
+                            <li><strong>Master of Science (MSc) from ESADE Business & Law School:</strong> Yash pursued
+                                his master's degree focusing on entrepreneurship and innovation, equipping him with the
+                                skills to navigate and lead in dynamic technological landscapes.</li>
+
+                            <li><strong>Bachelor of Technology (B.Tech.) from Jaypee Institute of Information
+                                    Technology:</strong> His undergraduate studies in computer science engineering laid
+                                the foundation for his technical expertise.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Additional Roles and Achievements</h5>
+                        <ul>
+                            <li><strong>Member of the Metaverse Fashion Council:</strong> Yash actively contributes to
+                                discussions and developments at the intersection of fashion and virtual reality,
+                                reflecting his dedication to pioneering new frontiers in digital fashion.</li>
+
+                            <li><strong>Innovation Manager at Nuromedia GmbH:</strong> He has managed VR/AR projects,
+                                showcasing his ability to lead innovative technological initiatives.</li>
+                        </ul>
+
+                        <p>Yash's diverse experience and forward-thinking approach align seamlessly with Tangi's mission
+                            to revolutionize payment solutions in the cannabis industry. As our CTO, he will spearhead
+                            technological advancements, ensuring that Tangi remains at the forefront of innovation and
+                            continues to deliver exceptional value to our clients and partners.</p>
+                        <p>We are confident that Yash's leadership and expertise will drive Tangi's technological vision, fostering growth and solidifying our position as a leader in the industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9 - Dr. Holger Sprengel -->
+    <div class="modal fade team-modal" id="teamModal9" tabindex="-1" aria-labelledby="teamModalLabel9"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/our people page Holger-Sprengel.webp" alt="Dr. Holger Sprengel"
+                        class="team-modal-img">
+                    <h2 class="team-modal-name">Dr. Holger Sprengel</h2>
+                    <span class="team-modal-role">ENTREPRENEUR AND INVESTOR</span>
+
+                    <div class="team-modal-bio">
+                        <p>Dr. Holger Sprengel is a distinguished entrepreneur and investor with a diverse portfolio
+                            spanning technology, mobility, health, and medical cannabis sectors. Holding a Master of
+                            Science in Geoscience from the University of Tübingen and ETH Zurich, Dr. Sprengel has
+                            co-founded and managed several successful ventures.</p>
+
+                        <h5 class="mt-4">Professional Highlights</h5>
+                        <ul>
+                            <li><strong>Co-Founder and Managing Director at Grupo HS3:</strong> Dr. Sprengel leads Grupo
+                                HS3, focusing on innovative solutions across various industries.</li>
+
+                            <li><strong>Co-Founder of Cooltra:</strong> He co-founded Cooltra, a company specializing in
+                                sustainable mobility solutions, particularly in the electric scooter segment.</li>
+
+                            <li><strong>Managing Director at Nuromedia GmbH and DigitalTwin Technology GmbH:</strong>
+                                Dr. Sprengel oversees operations at Nuromedia, a software engineering company
+                                established in 2005, and its spin-off, DigitalTwin Technology GmbH. Both companies excel
+                                in areas such as Digital Twin technology, Smart City initiatives, IoT, Edge computing,
+                                smart farming, visualization, and VR/AR applications.</li>
+
+                            <li><strong>Co-Founder and Managing Director at CanPharma:</strong> In the health sector,
+                                Dr. Sprengel co-founded CanPharma, contributing to advancements in medical cannabis.
+                            </li>
+
+                            <li><strong>Co-Founder of Tunnelware:</strong> He also co-founded Tunnelware, focusing on
+                                technological innovations in tunnel construction and safety.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Research and Development Contributions</h5>
+                        <p>Dr. Sprengel has actively participated in numerous national and European R&D projects,
+                            notably within the Horizon2020 program. His expertise encompasses software development,
+                            VR/AR, server development, gamification, AI, Machine Learning, Big Data, Blockchain, and ICT
+                            solutions for sectors like eHealth, eLearning, Smart City, Smart Factory, Smart Farming,
+                            Digital Twin, and Industry 4.0.</p>
+
+                        <p>Dr. Sprengel's extensive experience and leadership in technology and health sectors position
+                            him as a valuable asset to our innovative venture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10 - Dr. Pritesh Kumar -->
+    <div class="modal fade team-modal" id="teamModal10" tabindex="-1" aria-labelledby="teamModalLabel10"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/ourpeople/ou people page  pritesh.webp" alt="Dr. Pritesh Kumar"
+                        class="team-modal-img">
+                    <h2 class="team-modal-name">Dr. Pritesh Kumar</h2>
+                    <span class="team-modal-role">EXPERT IN CANNABINOID PHARMACOLOGY AND CANNABIS POLICY</span>
+
+                    <div class="team-modal-bio">
+                        <p>We are privileged to have Dr. Pritesh Kumar as a key advisor to our team. With a Ph.D. in
+                            Pharmacology and Toxicology from the University of Louisville, School of Medicine,
+                            specializing in cannabinoid pharmacology, Dr. Kumar brings a wealth of knowledge and
+                            experience to our team.</p>
+
+                        <h5 class="mt-4">Professional Highlights</h5>
+                        <ul>
+                            <li><strong>Managing Director of PhytoSciences GmbH:</strong> Dr. Kumar leads this
+                                Switzerland-based consultancy, which comprises over 100 scientists and analysts across
+                                Europe, Africa, Canada, India, and the USA. The firm specializes in investment due
+                                diligence, analytical testing, clinical trial solutions, novel drug delivery technology
+                                development, and commercial bioprocessing. Under his leadership, PhytoSciences has
+                                assisted start-up companies in raising over $150 million in equity and debt financing.
+                            </li>
+
+                            <li><strong>Head of Capital Markets at Achio Capital Partners:</strong> In this role, Dr.
+                                Kumar leverages his deep understanding of the legal cannabis industry, including
+                                biotechnology and pharmaceuticals, to guide investment strategies and capital market
+                                activities.</li>
+
+                            <li><strong>Chief Scientific Officer (CSO) for PharmaCielo Ltd:</strong> Dr. Kumar served as
+                                the CSO for PharmaCielo Ltd (TSXV: PCLO) (OTCQX: PCLOF), a Canadian company with
+                                operations in Colombia, South America. He was responsible for the company's R&D, global
+                                business product development strategy, and Phase I development of a state-of-the-art GMP
+                                pharmaceutical cannabis bioprocessing plant.</li>
+
+                            <li><strong>Advisor to the World Health Organization (WHO):</strong> Dr. Kumar has provided
+                                consultation services to the 40th Meeting of the Expert Committee on Drug Dependence
+                                regarding cannabis toxicology, contributing to global policy discussions on cannabis
+                                regulation.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Academic Contributions</h5>
+                        <ul>
+                            <li><strong>Director of Cannabinoid Research at Canadore College:</strong> Dr. Kumar has
+                                served as the Director of Cannabinoid Research, advancing studies in cannabinoid
+                                pharmacology and therapeutic applications.</li>
+
+                            <li><strong>Scientific Advisor for Addis Ababa University, School of Pharmacy (SoP) in
+                                    Ethiopia:</strong> In this role, he facilitates advancements in graduate student
+                                education, promotes the interests of the SoP, and develops relationships between the SoP
+                                and the private sector.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Publications and Presentations</h5>
+                        <p>Dr. Kumar has been published in numerous scientific journals, including the European Journal
+                            of Pharmacology, Pharmacology and Physiology, Journal of Medicinal Chemistry, Investigative
+                            Ophthalmology & Visual Science, and Biochemical and Biophysical Research Communications. He
+                            has also authored a book chapter on polymorphisms in the cannabinoid receptor 2 and related
+                            impacts on certain pathologies and has presented at several international symposiums.</p>
+
+                        <h5 class="mt-4">Role at Tangi</h5>
+                        <p>Dr. Kumar's extensive experience in cannabinoid research, cannabis policy consulting, and
+                            pharmaceutical development provides our team with unparalleled expertise. His insights into
+                            laboratory facility design, analytical methodology for cannabinoid analysis, and quality
+                            assurance systems ensure that our products meet the highest standards of compliance and
+                            efficacy. His global perspective and connections within the cannabis industry enhance our
+                            ability to navigate complex regulatory landscapes and drive innovation in cannabis-based
+                            therapeutics.</p>
+                        <p>Having Dr. Pritesh Kumar as part of the Tangi team underscores our commitment to scientific excellence, regulatory compliance, and the development of high-quality cannabis products that meet the needs of patients and consumers worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer-area -->
+    <footer class="footer__area footer__area-two">
+        <div class="container">
+            <div class="footer__inner-wrap">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright-text">
+                            <p>Copyright & design by <a href="https://themeforest.net/user/themeadapt"
+                                    target="_blank">@Themeadapt</a> - 2025</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__view-channel">
+                            <span>VIP channel:</span>
+                            <a href="https://web.telegram.org" target="_blank" class="tg-btn">
+                                <img src="assets/img/icons/btn_right_arrow.svg" alt="icon" class="right_arrow">
+                                <span>
+                                    <img src="assets/img/icons/btn_icon_04.svg" alt="">
+                                    telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

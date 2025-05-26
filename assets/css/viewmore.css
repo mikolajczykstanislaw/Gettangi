@@ -1,0 +1,164 @@
+.vesting-notice {
+    background: rgba(112, 59, 255, 0.03);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(112, 59, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.vesting-notice:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.vesting-notice h3 {
+    font-size: 28px;
+    background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.vesting-notice h4 {
+    font-size: 22px;
+    background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 25px 0 15px;
+    font-weight: 600;
+}
+
+.vesting-notice p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.vesting-notice ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.vesting-notice ul li {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, #703BFF 0%, #4B59F5 100%);
+    margin: 30px auto;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid #703BFF;
+    color: #703BFF;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.toggle-btn .btn-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.toggle-btn .btn-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #703BFF 0%, #4B59F5 100%);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.toggle-btn:hover .btn-bg {
+    width: 100%;
+}
+
+.toggle-btn:hover {
+    color: white;
+}
+
+.toggle-btn:hover svg path {
+    stroke: white;
+}
+
+.toggle-btn svg {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn.active svg {
+    transform: rotate(180deg);
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+    .vesting-notice {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .vesting-notice {
+        padding: 25px;
+    }
+
+    .vesting-notice h3 {
+        font-size: 24px;
+    }
+
+    .vesting-notice h4 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .vesting-notice {
+        padding: 20px;
+    }
+
+    .vesting-notice h3 {
+        font-size: 22px;
+    }
+
+    .vesting-notice h4 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Tangi - Mitigating Risk Factors</title>
+    <meta name="description"
+        content="Learn how Tangi is mitigating risks and strengthening investor confidence in our token" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/default-icons.css" />
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/tg-cursor.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Risk Factors Page Styling */
+
+        /* General Styling */
+        .risk-section {
+            padding: 120px 0;
+            background-color: #0a0a0a;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Section Title Styling */
+        .risk-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .risk-section h3 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .risk-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Intro Text Styling */
+        .intro-text {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #ffffff;
+            font-weight: 500;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Risk Card Styling */
+        .risk-card {
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+            position: relative;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .risk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .risk-card h4 {
+            font-size: 22px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .risk-card p {
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* Risk Number Styling */
+        .risk-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Risk Image Styling */
+        .risk-image {
+            text-align: center;
+            margin: 40px auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .breadcrumb__content {
+            text-align: center;
+        }
+
+        .risk-image:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.2) 0%,
+                    rgba(75, 89, 245, 0.2) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .risk-image:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.15) 0%,
+                    rgba(75, 89, 245, 0.15) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .risk-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Conclusion Styling */
+        .conclusion {
+            background: rgba(112, 59, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .conclusion h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .conclusion p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .conclusion p:last-of-type {
+            margin-bottom: 30px;
+        }
+
+        /* Button Styling */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid #703bff;
+            color: #703bff;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 220px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .cta-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: white;
+        }
+
+        .cta-button:hover:before {
+            width: 100%;
+        }
+
+        /* Risk Highlight Box - New Addition */
+        .risk-highlight {
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(75, 89, 245, 0.05) 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            position: relative;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .risk-highlight h4 {
+            font-size: 24px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .risk-highlight p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        /* Risk Comparison - New Addition */
+        .risk-comparison {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px auto;
+            max-width: 1000px;
+            gap: 30px;
+        }
+
+        .risk-column {
+            flex: 0 0 calc(50% - 15px);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .risk-column.high-risk {
+            background: rgba(255, 59, 59, 0.05);
+            border: 1px solid rgba(255, 59, 59, 0.2);
+        }
+
+        .risk-column.low-risk {
+            background: rgba(59, 255, 112, 0.05);
+            border: 1px solid rgba(59, 255, 112, 0.2);
+        }
+
+        .risk-column h4 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .risk-column.high-risk h4 {
+            background: linear-gradient(90deg, #ff3b3b 0%, #ff5f5f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .risk-column.low-risk h4 {
+            background: linear-gradient(90deg, #3bff70 0%, #5fff8f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .risk-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .risk-column ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .risk-column ul li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+
+        .risk-column.high-risk ul li:before {
+            background: linear-gradient(90deg, #ff3b3b 0%, #ff5f5f 100%);
+        }
+
+        .risk-column.low-risk ul li:before {
+            background: linear-gradient(90deg, #3bff70 0%, #5fff8f 100%);
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb__area .sub-title {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(90deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(22, 37, 97, 0.1) 100%);
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb__area .sub-title svg path {
+            fill: #703bff;
+        }
+
+        .breadcrumb__area .title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: center;
+        }
+
+        /* Footer Centering */
+        .footer__area .copyright-text {
+            text-align: center;
+        }
+
+        .footer__area .footer__view-channel {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 991px) {
+            .risk-section {
+                padding: 80px 0;
+            }
+
+            .risk-section h2 {
+                font-size: 32px;
+            }
+
+            .risk-section h3 {
+                font-size: 26px;
+            }
+
+            .risk-card {
+                padding: 30px;
+                max-width: 100%;
+            }
+
+            .risk-card h4 {
+                font-size: 20px;
+            }
+
+            .conclusion {
+                padding: 30px;
+                max-width: 100%;
+            }
+
+            .conclusion h3 {
+                font-size: 28px;
+            }
+
+            .risk-highlight {
+                padding: 25px;
+                max-width: 100%;
+            }
+
+            .risk-highlight h4 {
+                font-size: 22px;
+            }
+
+            .risk-column {
+                padding: 25px;
+            }
+
+            .risk-comparison {
+                max-width: 100%;
+            }
+
+            .footer__area .footer__view-channel {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .risk-section h2 {
+                font-size: 28px;
+            }
+
+            .risk-section h3 {
+                font-size: 24px;
+            }
+
+            .risk-card {
+                padding: 25px;
+            }
+
+            .risk-card h4 {
+                font-size: 18px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .risk-number {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .intro-text {
+                font-size: 18px;
+            }
+
+            .conclusion {
+                padding: 25px;
+            }
+
+            .conclusion h3 {
+                font-size: 24px;
+            }
+
+            .conclusion p {
+                font-size: 16px;
+            }
+
+            .risk-highlight {
+                padding: 20px;
+            }
+
+            .risk-highlight h4 {
+                font-size: 20px;
+            }
+
+            .risk-highlight p {
+                font-size: 16px;
+            }
+
+            .risk-column {
+                flex: 0 0 100%;
+                padding: 20px;
+            }
+
+            .breadcrumb__area .title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .risk-section h2 {
+                font-size: 26px;
+            }
+
+            .risk-section h3 {
+                font-size: 22px;
+            }
+
+            .risk-card {
+                padding: 20px;
+            }
+
+            .risk-card h4 {
+                font-size: 17px;
+            }
+
+            .intro-text {
+                font-size: 16px;
+            }
+
+            .conclusion {
+                padding: 20px;
+            }
+
+            .conclusion h3 {
+                font-size: 22px;
+            }
+
+            .risk-highlight h4 {
+                font-size: 18px;
+            }
+
+            .breadcrumb__area .title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="header" class="transparent-header">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo">
+                                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="home.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home.html#investment-options-section">The offer</a></li>
+                                            <li><a href="home.html#our-media">Our Media</a></li>
+                                            <li><a href="home.html#features">Features</a></li>
+                                            <li><a href="home.html#roadmap">Roadmap</a></li>
+                                            <li><a href="home.html#faq">FAQ</a></li>
+                                            <li><a href="home.html#contact">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="">Investors Hub</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="the-problem.html">The Problem</a></li>
+                                            <li><a href="our-solution.html">Our Solution</a></li>
+                                            <li><a href="ourpeople.html">Our People</a></li>
+                                            <li><a href="our-partners.html">Our Partners</a></li>
+                                            <li class="menu-item-has-children horizontal-dropdown"><a
+                                                    href="#">Public Listing</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="investment-to-listing.html">Overview</a></li>
+                                                    <li><a href="getting-in-entry-plan.html">Getting In - The Entry
+                                                            Plan</a></li>
+                                                    <li><a href="getting-out-exit-plan.html">Getting Out - The Exit
+                                                            Plan</a></li>
+                                                    <li><a href="hold-for-more-upside.html">Or Hold For More
+                                                            Upside?</a></li>
+                                                    <li><a href="end-users-buy-you-profit.html">End Users Buy, You
+                                                            Profit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="Round_1_Investors_Testimonials.html">Round 1 Investors
+                                                    Testimonials</a></li>
+                                            <li><a href="how-our-solution-works.html">How Our Solution Works</a>
+                                            </li>
+                                            <li><a href="investor-highlight-reel.html">Investor Highlight Reel</a>
+                                            </li>
+                                            <li><a href="market-entry-strategy.html">Market Entry Strategy</a></li>
+                                            <li><a href="market-potential.html">Market Potential</a></li>
+                                            <li><a href="tangi-tokenomics.html">Tangi Tokenomics</a></li>
+                                            <li><a href="legal-landscape.html">Legal Landscape</a></li>
+                                            <li><a href="our-story.html">Our Story</a></li>
+                                            <li><a href="special-thanks.html">Round 1 Members, Thank You!</a></li>
+                                            <li><a href="tangi-roadmap.html">Our Past, Present & Future</a></li>
+                                            <li class="active"><a href="mitigating-risk-factors.html">Mitigating Risk Factors</a>
+                                            </li>
+                                            <li><a href="risk-warning.html">Risk Warning for Investors</a></li>
+                                            <li><a href="potential-roi.html">The Potential ROI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://t.me/GetTangiToken" class="section-link">Connect To
+                                            Investors </a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <li class="header-btn">
+                                        <a href="./coming_soon_page.html" class="tg-btn">
+                                            <img src="assets/img/icons/btn_right_arrow.svg" alt="icon"
+                                                class="right_arrow">
+                                            <span>
+                                                <img src="assets/img/icons/btn_icon.svg" alt="">
+                                                Buy Token
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+            <div class="nav-logo">
+                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tgmobile__menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="https://t.me/GetTangiTokentelegram" title="Telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@tangicrypto170" title="YouTube" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://twitter.com/gettangi?s=21" title="X (Twitter)" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512"
+                                fill="currentColor">
+                                <path
+                                    d="M370.6 32H471L305.4 241.4 504 480H351.6L234.4 328.8 99.4 480H0L179.2 256 0 32h157.6l104.8 130.4L370.6 32z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://discord.gg/Ff7ehSTf" title="Discord" target="_blank"><i
+                                class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <!-- header-search -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search__wrapper">
+                        <div class="search__close">
+                            <button type="button" class="search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type keywords here">
+                                    <span class="search-focus-border"></span>
+                                    <button>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup-overlay"></div>
+    <!-- header-search-end -->
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area">
+            <div class="breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.png"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb__content">
+                            <h1 class="title">Mitigating Risk Factors</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- risk-section -->
+        <section class="risk-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <h2>
+                            Mitigating Risk and Strengthening Confidence in
+                            Tangi Token
+                        </h2>
+                        <p class="intro-text">
+                            While no investment is entirely without risk, we at Tangi have worked tirelessly over the years to mitigate as many risks as possible, positioning ourselves as one of the most stable and reliable options in this space. Here’s how we’ve reduced the risks associated with our token project:
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="risk-image">
+                            <img src="assets/img/otherpage/MitigatingRiskFactors.webp"
+                                alt="Tangi Payment Solution with Smartphone and Shopping" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="risk-card">
+                            <h4>
+                                <span class="risk-number">1</span> Team
+                                Expertise and Proven Track Record
+                            </h4>
+                            <p>
+                                One of the key factors in reducing risk is the strength of the team behind Tangi. With years of experience working with major companies across various industries, our team has successfully navigated complex markets, including high-risk environments like the cannabis industry. We have proven our ability to develop, implement, and execute on big ideas, and we’ve built the right team to continue driving success. This extensive experience allows us to foresee and mitigate potential obstacles before they arise.
+                            </p>
+                        </div>
+
+                        <div class="risk-card">
+                            <h4>
+                                <span class="risk-number">2</span> Lessons
+                                Learned from Round 1
+                            </h4>
+                            <p>
+                                The completion of Round 1 has been a crucial step in solidifying our credibility and proving that our model is feasible. Round 1 gave us an invaluable understanding of the market, investor concerns, and the exact steps needed to scale effectively. By working through the challenges with our first 2,500 investors, we’ve refined our approach and positioned ourselves to be even more successful with Round 2. The feedback we received was crucial in developing a roadmap that focuses on the long-term sustainability of the token, which significantly reduces risk for current and future investors.
+                            </p>
+                        </div>
+
+                        <div class="risk-card">
+                            <h4>
+                                <span class="risk-number">3</span>
+                                First-to-Market Advantage with Bank
+                                Partnerships
+                            </h4>
+                            <p>
+                                One of the most significant risk-reducing factors we’ve achieved is the successful establishment of a banking relationship, an achievement that no other cannabis payment provider has managed to do. This relationship sets us apart from other projects in the space that have failed due to lack of compliance or inability to access banking services. By being the first to offer a compliant payment solution and having full banking backing, we ensure that our services are sustainable, legal, and scalable. This makes our business model less vulnerable to external regulatory changes, giving our investors a solid foundation on which to build their returns.
+                            </p>
+                        </div>
+
+                        <div class="risk-card">
+                            <h4>
+                                <span class="risk-number">4</span> Fully
+                                Compliant and Transparent Operations
+                            </h4>
+                            <p>
+                                One of the largest risks in the crypto and cannabis industries has been the problem of compliance. By being transparent and strictly adhering to all regulatory requirements, we significantly reduce legal risks that often plague other projects. Our dual-payment system, which includes traditional card payments and token payments, provides an additional layer of flexibility for consumers and retailers while remaining fully compliant with all applicable regulations.
+                            </p>
+                        </div>
+
+                        <div class="risk-card">
+                            <h4>
+                                <span class="risk-number">5</span> Token
+                                Adoption Strategy
+                            </h4>
+                            <p>
+                                We've strategically designed our platform to ensure that the token becomes the primary payment method for consumers and retailers, which directly contributes to the long-term sustainability of the project. By capturing consumers first with traditional payment options and seamlessly transitioning them to token payments, we ensure that a ready-made user base will exist when the token publicly lists. As token adoption grows, so too will its value, making it a secure and highly valuable asset for investors. This gradual adoption curve mitigates the risk of volatility often associated with early-stage tokens.
+                            </p>
+                        </div>
+
+                        <div class="risk-card">
+                            <h4>
+                                <span class="risk-number">6</span>
+                                Real-World Utility and Market Demand
+                            </h4>
+                            <p>
+                               Tangi is not just another speculative crypto token—our token has real-world utility. It addresses the long-standing problem of cash-only transactions in the cannabis industry, solving the payment issues faced by retailers and consumers alike. With 8,000 retailers and 60 million potential users, the demand for our token is not driven by speculation, but by a genuine market need. By capturing even a small portion of this $33 billion market, we position ourselves for massive growth, directly benefiting investors.
+                            </p>
+                        </div>
+
+                        <div class="risk-card">
+                            <h4>
+                                <span class="risk-number">7</span> Imminent
+                                Rollout and Market Expansion
+                            </h4>
+                            <p>
+                                The imminent rollout of our services, starting with the launch of our Cannabis Superstore, provides a clear path to market adoption. As we gain traction with retailers and consumers, the visibility of our token will increase exponentially, creating a robust foundation for a public listing. This imminent expansion means that we’re not relying on abstract concepts—we’re relying on real, market-driven adoption.
+                            </p>
+                        </div>
+
+                        <div class="risk-card">
+                            <h4>
+                                <span class="risk-number">8</span> Strategic
+                                Partnerships and Ongoing Collaboration
+                            </h4>
+                            <p>
+                                We are also continuously building partnerships with key players in the industry. From retailers to influencers and industry veterans, we have a strong network that supports the growth of our project. The ongoing collaboration with forward-thinking banks and financial institutions further strengthens our position in the market, ensuring that we remain ahead of the competition.
+                            </p>
+                        </div>
+
+                        <div class="conclusion">
+                            <h3>Conclusion: A Strong, Risk-Reduced Path Forward</h3>
+                            <p>
+                                We recognize that risk is inherent in every investment, but through our experienced team, strategic decisions, and a focus on regulatory compliance, we have significantly reduced those risks for our investors. Tangi has carefully positioned itself for long-term growth, with a solid foundation and a clearly defined path toward success. As we continue to scale and make real-world progress, the risk of investing in Tangi has been minimized, and the potential rewards are vast. We invite you to take advantage of the opportunity to invest in a project that not only reduces risk but actively works to ensure success for all its stakeholders
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="cta-button">Buy Token</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- risk-section-end -->
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer-area -->
+    <footer class="footer__area footer__area-two">
+        <div class="container">
+            <div class="footer__inner-wrap">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright-text">
+                            <p>
+                                Copyright & design by
+                                <a href="https://themeforest.net/user/themeadapt" target="_blank">@Themeadapt</a>
+                                - 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__view-channel">
+                            <span>VIP channel:</span>
+                            <a href="https://web.telegram.org" target="_blank" class="tg-btn">
+                                <img src="assets/img/icons/btn_right_arrow.svg" alt="icon" class="right_arrow" />
+                                <span>
+                                    <img src="assets/img/icons/btn_icon_04.svg" alt="" />
+                                    telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome to Tangi</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="assets/img/favicon.ico"
+        />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS -->
+        <style>
+            :root {
+                --primary-color: #703bff;
+                --secondary-color: #4b59f5;
+                --dark-color: #162561;
+                --light-color: #f8f9fa;
+                --text-color: #ffffff;
+                --text-secondary: #9e9e9e;
+                --background-color: #0a0a1a;
+            }
+
+            body {
+                font-family: "Poppins", sans-serif;
+                background-color: var(--background-color);
+                color: var(--text-color);
+                overflow-x: hidden;
+                line-height: 1.7;
+            }
+
+            p {
+                font-size: 1.05rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .gradient-text {
+                background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                font-weight: 700;
+            }
+
+            /* Navbar Styling - Updated to match the image */
+            .header {
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                background-color: var(--background-color);
+                position: relative;
+                z-index: 1000;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            .nav-buttons {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .nav-btn {
+                background-color: transparent;
+                border: 1px solid var(--primary-color);
+                border-radius: 30px;
+                color: var(--primary-color);
+                padding: 8px 20px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                margin: 0 5px;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-btn:hover {
+                background-color: var(--primary-color);
+                color: white;
+            }
+
+            .nav-btn i {
+                margin-right: 8px;
+            }
+
+            .welcome-section {
+                padding: 60px 0 40px;
+                position: relative;
+            }
+
+            .welcome-section:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("assets/img/bg/area_bg.jpg") no-repeat center
+                    center/cover;
+                opacity: 0.1;
+                z-index: -1;
+            }
+
+            .title-section {
+                margin-bottom: 40px;
+                position: relative;
+            }
+
+            .title-section h1 {
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+                text-shadow: 0 5px 15px rgba(112, 59, 255, 0.3);
+            }
+
+            .title-section h5 {
+                font-size: 1.5rem;
+                color: var(--text-secondary);
+                font-weight: 500;
+            }
+
+            .subtitle {
+                display: inline-block;
+                padding: 10px 25px;
+                background: linear-gradient(
+                    90deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(22, 37, 97, 0.1) 100%
+                );
+                border-radius: 30px;
+                margin-bottom: 25px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                color: #703bff;
+                box-shadow: 0 5px 15px rgba(112, 59, 255, 0.15);
+            }
+
+            .title-divider {
+                width: 100px;
+                height: 5px;
+                background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+                margin: 0 auto 35px;
+                border-radius: 5px;
+            }
+
+            .content-box {
+                background: rgba(112, 59, 255, 0.05);
+                border-radius: 24px;
+                padding: 40px;
+                border: 1px solid rgba(112, 59, 255, 0.2);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                margin-bottom: 30px;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .content-box:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.5s ease;
+            }
+
+            .content-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            }
+
+            .content-box:hover:before {
+                transform: scaleX(1);
+            }
+
+            .content-box h4 {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+
+            .highlight-box {
+                background: rgba(112, 59, 255, 0.08);
+                border-radius: 16px;
+                padding: 20px;
+                margin-bottom: 25px;
+                border-left: 4px solid #703bff;
+            }
+
+            /* Enhanced Video Container - Larger without constraints */
+            .video-wrapper {
+                margin-bottom: 30px;
+            }
+
+            .video-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                background: #000;
+                border-radius: 16px;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
+                border: 2px solid rgba(112, 59, 255, 0.3);
+                overflow: hidden;
+            }
+
+            .video-container:hover {
+                transform: scale(1.02);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                border-color: rgba(112, 59, 255, 0.6);
+            }
+
+            .video-container video {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 14px;
+            }
+
+            .video-caption {
+                text-align: center;
+                margin-top: 15px;
+                font-style: italic;
+                color: var(--text-secondary);
+                font-size: 0.95rem;
+            }
+
+            /* List Styling */
+            .feature-list {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .feature-list li {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 20px;
+                font-size: 1.05rem;
+            }
+
+            .feature-list li:before {
+                content: "\f00c";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                position: absolute;
+                left: 0;
+                top: 2px;
+                color: #703bff;
+            }
+
+            .feature-list li strong {
+                color: #703bff;
+                font-weight: 600;
+            }
+
+            /* CTA Section */
+            .cta-section {
+                margin-top: 60px;
+                padding: 40px;
+                background: rgba(112, 59, 255, 0.08);
+                border-radius: 24px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .cta-section:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("assets/img/bg/area_bg_02.png") no-repeat center
+                    center/cover;
+                opacity: 0.05;
+                z-index: -1;
+            }
+
+            .cta-section h3 {
+                font-size: 2.2rem;
+                margin-bottom: 30px;
+            }
+
+            .btn-group {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            /* Modal Styles */
+            .modal-content {
+                background-color: #0a0a1a;
+                border: 1px solid rgba(112, 59, 255, 0.3);
+                border-radius: 20px;
+                color: var(--text-color);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+            }
+
+            .modal-header {
+                border-bottom: 1px solid rgba(112, 59, 255, 0.2);
+                padding: 20px 25px;
+                background: rgba(112, 59, 255, 0.05);
+            }
+
+            .modal-title {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #703bff;
+            }
+
+            .modal-header .btn-close {
+                color: white;
+                background: transparent
+                    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+                    center/1em auto no-repeat;
+                opacity: 0.8;
+                transition: all 0.3s ease;
+            }
+
+            .modal-header .btn-close:hover {
+                opacity: 1;
+                transform: rotate(90deg);
+            }
+
+            .modal-body {
+                padding: 25px;
+                max-height: 60vh;
+                overflow-y: auto;
+            }
+
+            .modal-body h4 {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+                color: #703bff;
+                text-align: left;
+            }
+
+            .modal-body p {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                margin-bottom: 20px;
+            }
+
+            .risk-text {
+                font-weight: 700;
+                color: #ff6b6b;
+            }
+
+            .form-check {
+                margin: 25px 0;
+                padding: 20px;
+                background: rgba(112, 59, 255, 0.05);
+                border-radius: 12px;
+                border: 1px solid rgba(112, 59, 255, 0.1);
+            }
+
+            .form-check-input {
+                width: 20px;
+                height: 20px;
+                margin-top: 0.25rem;
+            }
+
+            .form-check-input:checked {
+                background-color: #703bff;
+                border-color: #703bff;
+            }
+
+            .form-check-label {
+                margin-left: 10px;
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .form-control {
+                background-color: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(112, 59, 255, 0.2);
+                color: white;
+                padding: 12px 20px;
+                border-radius: 12px;
+                font-size: 1rem;
+            }
+
+            .form-control::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .form-control:focus {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-color: #703bff;
+                color: white;
+                box-shadow: 0 0 0 0.25rem rgba(112, 59, 255, 0.25);
+            }
+
+            .modal-footer {
+                border-top: 1px solid rgba(112, 59, 255, 0.2);
+                padding: 20px 25px;
+                background: rgba(112, 59, 255, 0.05);
+            }
+
+            .btn-accept {
+                background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+                color: white;
+                border: none;
+                padding: 12px 35px;
+                border-radius: 12px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(112, 59, 255, 0.3);
+            }
+
+            .btn-accept:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(112, 59, 255, 0.4);
+            }
+
+            .btn-accept:disabled {
+                background: #4a4a6a;
+                transform: none;
+                box-shadow: none;
+            }
+
+            .modal-body::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            .modal-body::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 10px;
+            }
+
+            .modal-body::-webkit-scrollbar-thumb {
+                background: rgba(112, 59, 255, 0.5);
+                border-radius: 10px;
+            }
+
+            .modal-body::-webkit-scrollbar-thumb:hover {
+                background: rgba(112, 59, 255, 0.7);
+            }
+
+            /* Responsive Styles */
+            @media (max-width: 1199px) {
+                .title-section h1 {
+                    font-size: 3rem;
+                }
+
+                .nav-btn {
+                    padding: 8px 15px;
+                    font-size: 0.8rem;
+                }
+            }
+
+            @media (max-width: 991px) {
+                .header {
+                    padding: 12px 0;
+                }
+
+                .logo img {
+                    height: 35px;
+                }
+
+                .nav-buttons {
+                    margin-top: 10px;
+                }
+
+                .welcome-section {
+                    padding: 60px 0 40px;
+                }
+
+                .title-section h1 {
+                    font-size: 2.5rem;
+                }
+
+                .title-section h5 {
+                    font-size: 1.3rem;
+                }
+
+                .content-box {
+                    padding: 30px;
+                }
+
+                .nav-btn {
+                    margin: 3px;
+                    padding: 6px 12px;
+                    font-size: 0.75rem;
+                }
+            }
+
+            @media (max-width: 767px) {
+                .header {
+                    padding: 10px 0;
+                }
+
+                .logo img {
+                    height: 30px;
+                }
+
+                .welcome-section {
+                    padding: 40px 0 30px;
+                }
+
+                .title-section {
+                    margin-bottom: 30px;
+                }
+
+                .title-section h1 {
+                    font-size: 2rem;
+                }
+
+                .title-section h5 {
+                    font-size: 1.1rem;
+                }
+
+                .content-box {
+                    padding: 25px;
+                    margin-bottom: 20px;
+                }
+
+                .content-box h4 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+
+                .cta-section {
+                    padding: 30px 20px;
+                }
+
+                .cta-section h3 {
+                    font-size: 1.8rem;
+                }
+
+                .mobile-menu-btn {
+                    display: block;
+                }
+
+                .nav-buttons.desktop {
+                    display: none;
+                }
+            }
+
+            /* Animation */
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(112, 59, 255, 0.4);
+                }
+                70% {
+                    box-shadow: 0 0 0 15px rgba(112, 59, 255, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(112, 59, 255, 0);
+                }
+            }
+
+            .pulse-animation {
+                animation: pulse 2s infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header - Updated to match the image -->
+        <header class="header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <img
+                                src="assets/img/logo/logo.png"
+                                alt="Tangi Logo"
+                                class="img-fluid"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="nav-buttons">
+                            <a href="coming_soon_page.html" class="nav-btn">
+                                Join Our PreSale Now
+                            </a>
+                            <a href="coming_soon_page.html" class="nav-btn">
+                                Join Our Exclusive Investor Club
+                            </a>
+                            <a href="home.html" class="nav-btn">
+                                Go To Website
+                            </a>
+                            <a
+                                href="https://t.me/GetTangiToken"
+                                class="nav-btn"
+                            >
+                                Connect With Existing Investors
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="title-section text-center">
+                            <div class="subtitle">
+                                <i class="fas fa-star-of-life me-2"></i>WELCOME
+                                TO TANGI
+                            </div>
+                            <h1 class="gradient-text">
+                                Welcome to Tangi Prepage
+                            </h1>
+                            <h5 class="text-center mb-4">
+                                Why Tangi? Why Now?
+                            </h5>
+                            <div class="title-divider"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="content-box">
+                                    <h4 class="gradient-text mb-4">
+                                        Project Overview
+                                    </h4>
+                                    <p>
+                                        This is your short overview of the
+                                        project before you enter the full
+                                        website. Once you’ve conducted your due
+                                        diligence and made an informed decision
+                                        to support our vision, you’ll be joining
+                                        a presale already backed by over 2,500
+                                        real investors — many of whom are active
+                                        in our Telegram channel and available to
+                                        speak directly.
+                                    </p>
+
+                                    <div class="highlight-box">
+                                        <p class="mb-0">
+                                            <i
+                                                class="fas fa-quote-left me-2 text-primary"
+                                            ></i
+                                            >Our team includes Former Country
+                                            Prime Ministers, White House
+                                            Advisors and some of the earliest
+                                            pioneers in Blockchain and Crypto —
+                                            combining decades of experience in
+                                            regulation, finance, tech, and
+                                            emerging markets.<i
+                                                class="fas fa-quote-right ms-2 text-primary"
+                                            ></i>
+                                        </p>
+                                    </div>
+
+                                    <p>
+                                        We make some bold claims here — and we
+                                        invite you to explore the main website
+                                        for a deeper dive into what we do, how
+                                        we do it, and why it matters.
+                                    </p>
+                                </div>
+
+                                <div class="content-box">
+                                    <h4 class="gradient-text mb-4">
+                                        What We've Built
+                                    </h4>
+
+                                    <p>
+                                        Tangi provides compliant,
+                                        bank-integrated payment processing for
+                                        highly regulated industries where
+                                        traditional providers refuse to operate.
+                                    </p>
+
+                                    <div class="highlight-box">
+                                        <p class="mb-0">
+                                            Our flagship solution focuses on the
+                                            legal cannabis market — a
+                                            <strong>$30B+ U.S. industry</strong>
+                                            with over 8,000 retailers and 60
+                                            million consumers that still rely
+                                            heavily on cash due to regulatory
+                                            limitations and banking
+                                            restrictions.
+                                        </p>
+                                    </div>
+
+                                    <p>
+                                        At the heart of our system is Tangi
+                                        Token (TNG) — a real utility token used
+                                        to facilitate payments across the retail
+                                        cannabis ecosystem.
+                                    </p>
+
+                                    <p>
+                                        With traditional banking partners
+                                        unwilling to serve this sector, we've
+                                        solved the single greatest challenge: we
+                                        secured an exclusive partnership with a
+                                        U.S.-regulated, pro-crypto bank.
+                                    </p>
+
+                                    <p>
+                                        This gives us — and only us — the
+                                        ability to offer cannabis retailers a
+                                        legal, transparent, fully compliant
+                                        payment platform with traditional card
+                                        payments, mobile payments, and a pathway
+                                        to crypto-token adoption.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5">
+                                <!-- Enhanced Video Section - Keeping the original video element -->
+                                <div class="content-box">
+                                    <div class="video-wrapper">
+                                        <div class="video-container">
+                                            <video
+                                                src="assets/videos/prepage.mp4"
+                                                controls
+                                                poster="assets/videos/prepage.png"
+                                                width="100%"
+                                            ></video>
+                                        </div>
+                                        <div class="video-caption">
+                                            <i class="fas fa-user-tie me-2"></i
+                                            >Former Prime Minister of Ireland &
+                                            Tangi Advisor
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content-box">
+                                    <h4 class="gradient-text mb-4">
+                                        The Token with Real Utility
+                                    </h4>
+
+                                    <p>
+                                        Tangi Token isn’t a speculative meme
+                                        coin waiting to find its use. It’s
+                                        already at the core of a functioning,
+                                        real-world solution with mass utility
+                                        potential.
+                                    </p>
+
+                                    <ul class="feature-list">
+                                        <li>
+                                            <strong>Retailers</strong> save on
+                                            transaction fees and gain access to
+                                            digital payments for the first
+                                            time..
+                                        </li>
+                                        <li>
+                                            <strong>Consumers</strong> get
+                                            discounts, loyalty rewards, and more
+                                            reasons to return.
+                                        </li>
+                                        <li>
+                                            <strong>You, </strong>
+                                            the token holder, can sell your
+                                            tokens on the public exchange — not
+                                            to other speculators, but to end
+                                            users who actually need them to
+                                            <strong
+                                                >Tangi gives you an actual
+                                                buyer.</strong
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Sections from the Screenshot -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="content-box text-center">
+                                    <h4 class="gradient-text">
+                                        Explore the Opportunity
+                                    </h4>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="highlight-box">
+                                                <h5>
+                                                    Your Window: $0.80 Now vs
+                                                    $1.50 at Listing
+                                                </h5>
+                                                <p>
+                                                    So while this isn’t just
+                                                    another coin launch — it’s
+                                                    your opportunity to access a
+                                                    real-world, regulated,
+                                                    revenue-generating token
+                                                    ecosystem before it opens up
+                                                    to the public.
+                                                </p>
+                                                <p>
+                                                    For a limited time, tokens
+                                                    are available at $0.80 as
+                                                    part of our final presale
+                                                    before going public.
+                                                </p>
+                                                <p>
+                                                    We will list between October
+                                                    1st and November 30th, 2025,
+                                                    with a $1.50 starting price
+                                                    and a $1.5M liquidity pool.
+                                                </p>
+                                                <p>
+                                                    Unlike typical crypto
+                                                    projects that chase
+                                                    speculators, Tangi will
+                                                    attract real users. As we
+                                                    scale retail adoption and
+                                                    convert consumers to token
+                                                    payments, the demand base
+                                                    will grow organically.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="highlight-box">
+                                                <h5>
+                                                    Original Investors Staked
+                                                </h5>
+                                                <p>
+                                                    Many of our original Round 1
+                                                    investors — have now
+                                                    voluntarily staked their
+                                                    entire holdings — over 5
+                                                    million in total — for a
+                                                    further 18 months. These
+                                                    holders have waited up to
+                                                    four years — and yet they’ve
+                                                    chosen to stake their tokens
+                                                    for another 18 months,
+                                                    locking them until well
+                                                    after our public listing.
+                                                </p>
+                                                <p>
+                                                    <a
+                                                        href="https://bscscan.com/token/0x0f2e518642ead9b3a4c5a7af0f9a7013bb591dd9?a=0xdf60865d6d6c337d1db7a5a92677c39d467d20ba"
+                                                        target="_blank"
+                                                        style="
+                                                            color: #703bff;
+                                                            text-decoration: underline;
+                                                        "
+                                                        >Click here to see proof
+                                                        of staking.</a
+                                                    >
+                                                </p>
+                                                <p>
+                                                    They won’t be selling when
+                                                    we list.That kind of
+                                                    conviction is rare. It’s a
+                                                    powerful sign of long-term
+                                                    belief in the team, the
+                                                    technology, and the
+                                                    opportunity ahead. With
+                                                    limited supply, high token
+                                                    lockup, and an
+                                                    end-user–driven model, price
+                                                    stability is built into our
+                                                    ecosystem by design. They’ve
+                                                    chosen to stay the course
+                                                    because they see what’s
+                                                    coming. This is the
+                                                    strongest signal of trust in
+                                                    the team that Round 1
+                                                    holders could possibly
+                                                    demonstrate.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-4">
+                                        <div class="col-md-6">
+                                            <div class="highlight-box">
+                                                <h5>
+                                                    Demand Will Drive the Value
+                                                </h5>
+                                                <p>
+                                                    At the time of public
+                                                    listing, the entire
+                                                    circulating supply—just 50
+                                                    million presale tokens—will
+                                                    be exclusively held by you
+                                                    and your fellow early
+                                                    investors, feeding the
+                                                    anticipated surge in demand.
+                                                </p>
+                                                <p>
+                                                    New investors and millions
+                                                    of end users will be
+                                                    competing to buy, but they
+                                                    can only purchase from you.
+                                                    With circulating supply and
+                                                    surging demand, the token’s
+                                                    value is poised for natural
+                                                    appreciation.
+                                                </p>
+                                                <ul
+                                                    class="feature-list text-start"
+                                                >
+                                                    <li>
+                                                        Built-in, predictable
+                                                        buy pressure
+                                                    </li>
+                                                    <li>
+                                                        Not just one-time
+                                                        buyers—every user is on
+                                                        repeat purchase
+                                                    </li>
+                                                    <li>
+                                                        Millions of end users
+                                                        automatically
+                                                        replenishing their
+                                                        wallets every month
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    As a Round 2 investor,
+                                                    you’re in a prime position
+                                                    to capitalize on continuous
+                                                    demand—whether selling to
+                                                    incoming investors at
+                                                    listing or holding as mass
+                                                    adoption accelerates.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="highlight-box">
+                                                <h5>Potential Token Value</h5>
+                                                <ul
+                                                    class="feature-list text-start"
+                                                >
+                                                    <li>
+                                                        While we make no
+                                                        forward-looking promises
+                                                        or financial guarantees,
+                                                        internal projections
+                                                        show that even modest
+                                                        adoption (just 1% of our
+                                                        available market) has
+                                                        the potential to support
+                                                        a token value of $6.60
+                                                        over time — based solely
+                                                        on fundamental adoption
+                                                        and repeat use by end
+                                                        users.
+                                                    </li>
+                                                    <li>
+                                                        At 5% market penetration
+                                                        ($1.65B in
+                                                        transactions), each
+                                                        token could be $33+
+                                                    </li>
+                                                    <li>
+                                                        Capture 10% of the
+                                                        market, and now you’re
+                                                        looking at a $66+ per
+                                                        token value.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Summary Section -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="content-box">
+                                    <h4 class="gradient-text text-center">
+                                        Summary
+                                    </h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="feature-list">
+                                                <li>
+                                                    A real-world utility token
+                                                    backed by compliance and
+                                                    actual demand, not hype or
+                                                    speculation.
+                                                </li>
+                                                <li>
+                                                    Solving a $33B industry
+                                                    problem by providing the
+                                                    first compliant payment
+                                                    solution for cannabis
+                                                    retailers.
+                                                </li>
+                                                <li>
+                                                    8,000 retailers urgently
+                                                    need the services powered by
+                                                    our token.
+                                                </li>
+                                                <li>
+                                                    60 million potential end
+                                                    users for investors to sell
+                                                    on to.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="feature-list">
+                                                <li>
+                                                    Limited token supply,
+                                                    controlled by presale
+                                                    investors when listed.
+                                                </li>
+                                                <li>
+                                                    2,500 early investors
+                                                    already secured their
+                                                    position in Round 1.
+                                                </li>
+                                                <li>
+                                                    Proven leadership with
+                                                    experience in successful
+                                                    projects alongside industry
+                                                    giants like Peter Thiel,
+                                                    Charles Hoskinson, and Elon
+                                                    Musk.
+                                                </li>
+                                                <li>
+                                                    Clear exit strategy with multiple pathways to maximise ROI.
+                                                </li>
+                                                <li>
+                                                    Public Listing Scheduled Q4 2025.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p class="text-center mt-4">
+                                        Click through to the full website to meet the team, see the roadmap, and understand why 2,500+ investors are already on board — and why many of them have doubled down before the listing doors officially open. Below you will find a number of options to choose from. Thank you for considering our project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="cta-section">
+                            <div class="btn-group">
+                                <a
+                                    href="coming_soon_page.html"
+                                    class="nav-btn pulse-animation"
+                                >
+                                    Join Our PreSale Now
+                                </a>
+                                <a href="coming_soon_page.html" class="nav-btn">
+                                    Join Our Exclusive Investor Club
+                                </a>
+                                <a href="home.html" class="nav-btn">
+                                    Go To Website
+                                </a>
+                                <a
+                                    href="https://t.me/GetTangiToken"
+                                    class="nav-btn"
+                                >
+                                    Connect With Existing Investors
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer Modal -->
+        <div
+            class="modal fade"
+            id="disclaimerModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="disclaimerModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="disclaimerModalLabel">
+                            <i class="fas fa-exclamation-triangle me-2"></i
+                            >Disclaimer
+                        </h5>
+                    </div>
+                    <div class="modal-body">
+                        <h4>
+                            A Straight Talking Statement to Prospective
+                            Investors
+                        </h4>
+
+                        <p>
+                            Before you consider investing in Tangi, please read
+                            this carefully.
+                        </p>
+
+                        <p>
+                            We want to be perfectly clear from the outset: this
+                            project carries risk. There are no guarantees of
+                            success, no promises of returns, and no illusions of
+                            safety. This website, by its very nature, is a
+                            promotional tool—it’s designed to highlight our
+                            vision, our product, and the immense potential of
+                            what we’re building. But potential is not a
+                            guarantee, and enthusiasm should never be mistaken
+                            for certainty. If you’re not prepared to possibly
+                            lose your investment, do not invest. It’s that
+                            simple. No Hype. No Hand-Holding. You can join us,
+                            but you must join us on our terms, not yours. You
+                            are investing in our team’s vision, strategy, and
+                            potential. You are not employing us. You do not
+                            direct operations. You will not receive monthly
+                            financial statements. We are a privately held
+                            company, and that does not change when the token
+                            becomes tradable on public exchanges. Use of Funds &
+                            Full Discretion Once invested, your funds will fuel
+                            the project. This includes—but is not limited
+                            to—marketing, infrastructure, software development,
+                            hardware, operations, staff salaries, compliance,
+                            expansion, and everything else that a legitimate
+                            business requires to succeed. We reserve full
+                            discretion on how funds are spent. We are not
+                            crowdsourcing opinions. We are building a business.
+                            We’d rather be brutally honest and lose 100
+                            potential investors than sugar-coat reality and
+                            disappoint one. We're not here to convince you.
+                            We’re here to inform you. We’ve already attracted
+                            over 2,500 long-standing supporters who’ve stayed
+                            with us for years, turned down buybacks, and doubled
+                            down on their original investments after four years
+                            of waiting. If you're the type of investor who needs
+                            guarantees, control, or hand-holding—this is not the
+                            right opportunity for you. Compliance & Transparency
+                            From a compliance standpoint, you must know this:
+                            This is not a regulated security. You are not
+                            purchasing equity or debt. You are purchasing a
+                            utility token with functional use inside the Tangi
+                            ecosystem. The Tangi Token is not guaranteed to
+                            appreciate in value. Your investment may become
+                            illiquid. We are not offering financial advice, and
+                            you should conduct your own due diligence and
+                            consult with a qualified advisor. We will always
+                            operate within the legal and regulatory frameworks
+                            required of us—and you are expected to do the same.
+                            Final Word We are here to build something
+                            meaningful. We welcome everyone—but we don’t need
+                            anyone. If you choose to come on this journey with
+                            us, we’ll treat your investment with respect and run
+                            this project with integrity. But we will not waste
+                            our time dealing with tyre-kickers, conspiracy
+                            theorists, or keyboard warriors. If you share our
+                            vision, understand the risks, and believe in what
+                            we’re building—we welcome you. And if you do decide
+                            to invest, do it with eyes wide open and remember to
+                            join our Telegram channel to connect with
+                            like-minded investors. Everything we've said here is
+                            on record. By ticking the box and entering our
+                            website, you agree we gave you every reason to walk
+                            away. Risk Warning Statement Applies to: All Users,
+                            Purchasers, and Platform Participants Important
+                            Notice – Read Carefully Before Engaging By
+                            accessing, purchasing from, or participating in any
+                            product, program, token sale, platform service, or
+                            offering associated with GetTangiNow Corporation
+                            (hereafter "Tangi", "we", "our", "us") or its global
+                            subsidiaries, you confirm that you have read,
+                            understood, and accepted the following risk
+                            disclosures. Tangi products and services are not
+                            financial securities. They are not investments, and
+                            Tangi is not a regulated financial entity or broker.
+                            Our tokens, programs, or platform services do not
+                            constitute shares, equities, debt instruments, or
+                            any form of ownership in the company, nor do they
+                            carry voting rights, profit entitlements, or
+                            guarantees of return. The value of any tokens,
+                            rewards, or services provided is speculative, may
+                            fluctuate, and may become entirely worthless. Key
+                            Disclosures & Risks Not Regulated / No Investor
+                            Protection Tangi does not operate under the
+                            oversight of any securities or financial regulatory
+                            body, including but not limited to the SEC (USA),
+                            FCA (UK), ASIC (Australia), or ESMA (EU). As such:
+                            There are no investor protections, compensation
+                            schemes, or recourse mechanisms available to you.
+                            Purchasing our tokens or services is at your own
+                            risk and may result in the total loss of your funds.
+                            If you are not prepared to lose all the money you
+                            spend with us, you should not participate. High Risk
+                            of Total Loss Most early-stage and blockchain-based
+                            projects fail. You are more likely to lose your
+                            funds than to profit. Market conditions, regulatory
+                            changes, technical setbacks, or strategic pivots may
+                            result in: Devaluation of tokens or services Project
+                            suspension, modification, or closure Abandonment of
+                            products or platform features We make no promises or
+                            guarantees regarding project success, profitability,
+                            or continuity. Illiquidity & Lack of Exit Options
+                            Our tokens or credits may not be easily exchanged
+                            for fiat or other currencies. Secondary market
+                            liquidity may be unavailable, and if available, may
+                            be volatile, shallow, or manipulated by third
+                            parties. You may be unable to sell, transfer, or
+                            redeem your holdings at any time, or ever. No
+                            Rights, No Dividends, No Equity Participation does
+                            not entitle you to dividends, income,
+                            profit-sharing, or ownership. Our tokens are
+                            utility-based access tools, not investment products.
+                            They do not represent a legal claim against the
+                            company or its assets. No Guarantees of Price or
+                            Value The market price of any tokens we distribute
+                            or accept is determined solely by market forces and
+                            has no fixed or intrinsic value. We offer no
+                            assurances on price support, floor values, or
+                            appreciation. Vesting, Lockups & Limitations Tangi
+                            may impose vesting schedules, staking lockups, or
+                            usage restrictions on token allocations to support
+                            the health of the ecosystem. These limitations may
+                            affect your ability to sell or use tokens,
+                            regardless of market price. No Fiduciary or Advisory
+                            Role We do not act as financial advisors, brokers,
+                            or fiduciaries. You should obtain independent
+                            professional advice before participating. Any
+                            materials shared are for informational purposes only
+                            and do not constitute investment advice,
+                            solicitation, or endorsement. Compliance, Legal, and
+                            Taxation You are solely responsible for: Determining
+                            your eligibility to participate under local laws
+                            Declaring any gains or losses for tax purposes
+                            Complying with your country’s financial regulations
+                            Participation may be illegal in your jurisdiction.
+                            You agree that you are participating lawfully and at
+                            your own risk. Technology & Operational Risks
+                            Blockchain platforms are subject to: Hacks, bugs,
+                            smart contract failures Network congestion, outages,
+                            or protocol changes Wallet mismanagement or private
+                            key loss (by you) We are not liable for technical
+                            failures, wallet losses, or smart contract
+                            malfunctions. Final Warning If you are unsure about
+                            any aspect of this project, if you require the
+                            protection of regulated investment schemes, or if
+                            you are not capable of absorbing risk which may or
+                            may not lead to the partial or total loss of your
+                            funds, you should not participate. By continuing,
+                            you waive all legal claims against GetTangiNow
+                            Corporation, its directors, partners, team members,
+                            and service providers.
+                        </p>
+
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="acceptTerms"
+                                required
+                            />
+                            <label class="form-check-label" for="acceptTerms">
+                                By ticking this box, you agree that this action
+                                serves as your electronic signature, confirming
+                                your acceptance of the terms provided. Your IP
+                                address will be securely recorded solely to
+                                verify your agreement — it will never be used
+                                for any other purpose. If you'd like a copy of
+                                this disclaimer for your records, please enter
+                                your email address below and we'll send it to
+                                you.
+                            </label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label"
+                                >Email Address (Optional)</label
+                            >
+                            <div class="input-group">
+                                <span
+                                    class="input-group-text"
+                                    style="
+                                        background-color: rgba(
+                                            112,
+                                            59,
+                                            255,
+                                            0.1
+                                        );
+                                        border-color: rgba(112, 59, 255, 0.2);
+                                    "
+                                >
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </span>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="emailInput"
+                                    placeholder="Enter your email for a copy of this disclaimer"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn-accept"
+                            id="acceptButton"
+                            disabled
+                        >
+                            <i class="fas fa-check me-2"></i>Accept & Continue
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom JS -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Check if user has already accepted the disclaimer
+                const hasAccepted = localStorage.getItem(
+                    "tangiDisclaimerAccepted"
+                );
+
+                if (!hasAccepted) {
+                    // Show the modal if not accepted
+                    const disclaimerModal = new bootstrap.Modal(
+                        document.getElementById("disclaimerModal")
+                    );
+                    disclaimerModal.show();
+                }
+
+                // Enable/disable accept button based on checkbox
+                const acceptTermsCheckbox =
+                    document.getElementById("acceptTerms");
+                const acceptButton = document.getElementById("acceptButton");
+
+                acceptTermsCheckbox.addEventListener("change", function () {
+                    acceptButton.disabled = !this.checked;
+                });
+
+                // Handle accept button click
+                acceptButton.addEventListener("click", function () {
+                    // Store acceptance in localStorage
+                    localStorage.setItem("tangiDisclaimerAccepted", "true");
+
+                    // Optional: Send email if provided
+                    const email = document.getElementById("emailInput").value;
+                    if (email) {
+                        // Here you would typically send the email to your server
+                        console.log("Email provided:", email);
+                    }
+
+                    // Close the modal
+                    const disclaimerModal = bootstrap.Modal.getInstance(
+                        document.getElementById("disclaimerModal")
+                    );
+                    disclaimerModal.hide();
+                });
+            });
+        </script>
+    </body>
+</html>

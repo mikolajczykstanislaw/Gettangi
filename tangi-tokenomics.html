@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+        Tangi - Tokenomics: The Economic Foundation of the Project
+    </title>
+    <meta name="description" content="Learn about Tangi's tokenomics and the economic foundation of the project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/default-icons.css" />
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/tg-cursor.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Tokenomics Page Styling */
+
+        /* General Styling */
+        .tokenomics-section {
+            padding: 120px 0;
+            background-color: #0a0a0a;
+            position: relative;
+        }
+
+        /* Section Title Styling */
+        .tokenomics-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .tokenomics-section h3 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .tokenomics-section h4 {
+            font-size: 22px;
+            color: #703bff;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .tokenomics-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        /* Tokenomics Card Styling */
+        .tokenomics-card {
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+        }
+
+        .tokenomics-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .tokenomics-card h4 {
+            font-size: 22px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tokenomics-card p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .tokenomics-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tokenomics-card p strong {
+            color: #703bff;
+            font-weight: 700;
+        }
+
+        .breadcrumb__content {
+            text-align: center;
+        }
+
+        /* Intro Text Styling */
+        .intro-text {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-weight: 600;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Image Styling */
+        .tokenomics-image {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .tokenomics-image:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.2) 0%,
+                    rgba(75, 89, 245, 0.2) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .tokenomics-image:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.15) 0%,
+                    rgba(75, 89, 245, 0.15) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .tokenomics-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Conclusion Styling */
+        .conclusion {
+            background: rgba(112, 59, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .conclusion h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .conclusion p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .conclusion p:last-of-type {
+            margin-bottom: 30px;
+        }
+
+        /* Button Styling */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid #703bff;
+            color: #703bff;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 220px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .cta-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: white;
+        }
+
+        .cta-button:hover:before {
+            width: 100%;
+        }
+
+        /* Token Stats Styling */
+        .token-stats {
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(75, 89, 245, 0.05) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .token-stats:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #703bff 0%, #4b59f5 100%);
+        }
+
+        .token-stats h3 {
+            margin-bottom: 30px;
+            font-size: 28px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .token-stat-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(112, 59, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .token-stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .token-stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .token-stat-label {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        /* Token Distribution Chart - New Addition */
+        .token-distribution {
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+        }
+
+        .token-distribution h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .distribution-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(112, 59, 255, 0.02);
+            border-radius: 10px;
+            border: 1px solid rgba(112, 59, 255, 0.1);
+        }
+
+        .distribution-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .distribution-label {
+            flex-grow: 1;
+            color: #ffffff;
+        }
+
+        .distribution-value {
+            font-weight: 700;
+            color: #703bff;
+            flex-shrink: 0;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb__area .sub-title {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(90deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(22, 37, 97, 0.1) 100%);
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb__area .sub-title svg path {
+            fill: #703bff;
+        }
+
+        .breadcrumb__area .title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 991px) {
+            .tokenomics-section {
+                padding: 80px 0;
+            }
+
+            .tokenomics-section h2 {
+                font-size: 32px;
+            }
+
+            .tokenomics-section h3 {
+                font-size: 26px;
+            }
+
+            .tokenomics-card {
+                padding: 30px;
+            }
+
+            .token-stats {
+                padding: 30px;
+            }
+
+            .conclusion {
+                padding: 30px;
+            }
+
+            .conclusion h3 {
+                font-size: 28px;
+            }
+
+            .token-stat-value {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .tokenomics-section h2 {
+                font-size: 28px;
+            }
+
+            .tokenomics-section h3 {
+                font-size: 24px;
+            }
+
+            .tokenomics-card {
+                padding: 25px;
+            }
+
+            .tokenomics-card h4 {
+                font-size: 20px;
+            }
+
+            .intro-text {
+                font-size: 20px;
+            }
+
+            .token-stats {
+                padding: 25px;
+            }
+
+            .token-stat-item {
+                padding: 15px;
+            }
+
+            .token-stat-value {
+                font-size: 28px;
+            }
+
+            .conclusion {
+                padding: 25px;
+            }
+
+            .conclusion h3 {
+                font-size: 24px;
+            }
+
+            .conclusion p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .tokenomics-section h2 {
+                font-size: 26px;
+            }
+
+            .tokenomics-section h3 {
+                font-size: 22px;
+            }
+
+            .tokenomics-card {
+                padding: 20px;
+            }
+
+            .tokenomics-card h4 {
+                font-size: 18px;
+            }
+
+            .intro-text {
+                font-size: 18px;
+            }
+
+            .token-stats {
+                padding: 20px;
+            }
+
+            .token-stat-value {
+                font-size: 24px;
+            }
+
+            .conclusion {
+                padding: 20px;
+            }
+
+            .conclusion h3 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="header" class="transparent-header">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo">
+                                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="home.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home.html#investment-options-section">The offer</a></li>
+                                            <li><a href="home.html#our-media">Our Media</a></li>
+                                            <li><a href="home.html#features">Features</a></li>
+                                            <li><a href="home.html#roadmap">Roadmap</a></li>
+                                            <li><a href="home.html#faq">FAQ</a></li>
+                                            <li><a href="home.html#contact">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="">Investors Hub</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="the-problem.html">The Problem</a></li>
+                                            <li><a href="our-solution.html">Our Solution</a></li>
+                                            <li><a href="ourpeople.html">Our People</a></li>
+                                            <li><a href="our-partners.html">Our Partners</a></li>
+                                            <li class="menu-item-has-children horizontal-dropdown"><a
+                                                    href="#">Public Listing</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="investment-to-listing.html">Overview</a></li>
+                                                    <li><a href="getting-in-entry-plan.html">Getting In - The Entry
+                                                            Plan</a></li>
+                                                    <li><a href="getting-out-exit-plan.html">Getting Out - The Exit
+                                                            Plan</a></li>
+                                                    <li><a href="hold-for-more-upside.html">Or Hold For More
+                                                            Upside?</a></li>
+                                                    <li><a href="end-users-buy-you-profit.html">End Users Buy, You
+                                                            Profit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="Round_1_Investors_Testimonials.html">Round 1 Investors
+                                                    Testimonials</a></li>
+                                            <li><a href="how-our-solution-works.html">How Our Solution Works</a>
+                                            </li>
+                                            <li><a href="investor-highlight-reel.html">Investor Highlight Reel</a>
+                                            </li>
+                                            <li><a href="market-entry-strategy.html">Market Entry Strategy</a></li>
+                                            <li><a href="market-potential.html">Market Potential</a></li>
+                                            <li class="active"><a href="tangi-tokenomics.html">Tangi Tokenomics</a></li>
+                                            <li><a href="legal-landscape.html">Legal Landscape</a></li>
+                                            <li><a href="our-story.html">Our Story</a></li>
+                                            <li><a href="special-thanks.html">Round 1 Members, Thank You!</a></li>
+                                            <li><a href="tangi-roadmap.html">Our Past, Present & Future</a></li>
+                                            <li><a href="mitigating-risk-factors.html">Mitigating Risk Factors</a>
+                                            </li>
+                                            <li><a href="risk-warning.html">Risk Warning for Investors</a></li>
+                                            <li><a href="potential-roi.html">The Potential ROI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://t.me/GetTangiToken" class="section-link">Connect To
+                                            Investors </a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <li class="header-btn">
+                                        <a href="./coming_soon_page.html" class="tg-btn">
+                                            <img src="assets/img/icons/btn_right_arrow.svg" alt="icon"
+                                                class="right_arrow">
+                                            <span>
+                                                <img src="assets/img/icons/btn_icon.svg" alt="">
+                                                Buy Token
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+            <div class="nav-logo">
+                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tgmobile__menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="https://t.me/GetTangiTokentelegram" title="Telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@tangicrypto170" title="YouTube" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://twitter.com/gettangi?s=21" title="X (Twitter)" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512"
+                                fill="currentColor">
+                                <path
+                                    d="M370.6 32H471L305.4 241.4 504 480H351.6L234.4 328.8 99.4 480H0L179.2 256 0 32h157.6l104.8 130.4L370.6 32z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://discord.gg/Ff7ehSTf" title="Discord" target="_blank"><i
+                                class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <!-- header-search -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search__wrapper">
+                        <div class="search__close">
+                            <button type="button" class="search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type keywords here">
+                                    <span class="search-focus-border"></span>
+                                    <button>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup-overlay"></div>
+    <!-- header-search-end -->
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area">
+            <div class="breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.png"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb__content">
+                            <h1 class="title">
+                                Tangi Tokenomics: The Economic Foundation of the Project
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- tokenomics-section -->
+        <section class="tokenomics-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="tokenomics-image">
+                            <img src="assets/img/otherpage/TangiTokenomics.webp" alt="Tangi Cannabis Dispensary"
+                                class="img-fluid" />
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tokenomics-card">
+                            <h4>1. Limited Token Supply</h4>
+                            <p>
+                                <strong>Total Supply:</strong> 250 million
+                                tokens
+                            </p>
+                            <p>
+                                <strong>Initial Circulating Supply:</strong>
+                                50 million tokens (all held by presale investors like you)
+                            </p>
+                            <p>
+                                <strong>Why it Matters:</strong> The limited supply of 50 million tokens gives the token inherent scarcity. As the market adopts the token, the increasing demand for it will create upward pressure on its value. The scarcity factor is crucial for driving the token's value.
+                            </p>
+                        </div>
+
+                        <div class="tokenomics-card">
+                            <h4>2. Token Distribution & Ownership</h4>
+                            <p>
+                                <strong>Presale Investors:</strong> All 50 million tokens that will be in circulation at the time of public listing will be owned by investors who purchased during Round 1 and Round 2. These investors, including you, will control the initial supply when the token hits the public exchange.
+                            </p>
+                            <p>
+                                <strong>Why it Matters:</strong> Since investors will control the initial supply, they can influence the price based on market demand, creating substantial growth potential.
+                            </p>
+                        </div>
+
+                        <div class="tokenomics-card">
+                            <h4>
+                                3. Demand Drivers: Market Need & Token
+                                Utility
+                            </h4>
+                            <p>
+                                <strong>The Token's Role in Payment:</strong>
+                                The Tangi token is at the heart of a payment solution that addresses a $33 billion market. It provides a compliant and legal alternative to the current cash-only system and illegal payment solutions in the cannabis industry.
+                            </p>
+                            <p>
+                                <strong>Consumer Adoption:</strong>
+                                Consumers will be incentivized to use the token due to rewards such as discounts, loyalty points, and exclusive offers. As customers gravitate towards token payments due to the compelling rewards, retailers will increasingly support and push for the token to be used.
+                            </p>
+                            <p>
+                                <strong>Retailer Adoption:</strong>
+                                Retailers will benefit from token payments through significantly lower transaction fees compared to non-compliant payment methods. The token will provide them with a cheaper, faster, and more profitable payment method, driving its adoption.
+                            </p>
+                        </div>
+
+                        <div class="tokenomics-card">
+                            <h4>4. Utility & Real-World Application</h4>
+                            <p>
+                                <strong>A Fully Integrated Solution:</strong>
+                                Tangi Token will operate seamlessly from our bank-integrated platform and become the preferred method due to its compliance, rewards and cost-saving benefits
+                            </p>
+                            <p>
+                                <strong>Incentive-Based Adoption:</strong>
+                                Both retailers and consumers will be incentivized to adopt the token due to its economic advantages. Retailers save on transaction fees while benefiting from a loyalty program, and consumers will enjoy discounts and exclusive rewards when using the token.
+                            </p>
+                        </div>
+
+                        <div class="tokenomics-card">
+                            <h4>5. Future Market Demand</h4>
+                            <p>
+                                <strong>End User Base:</strong> With an estimated 60 million potential end users and 8,000 cannabis retailers needing a compliant payment solution, the demand for Tangi tokens is poised to be substantial. The growing consumer base for cannabis-related payments will directly fuel token demand.
+                            </p>
+                            <p>
+                                <strong>Real-World Use:</strong> Unlike many other speculative tokens, the Tangi token will have real-world utility, with immediate use in an established and growing market. The demand for Tangi tokens won’t just be speculative—it will be driven by consumers and retailers who will need the token for everyday transactions in the cannabis space.
+                            </p>
+                        </div>
+
+                        <div class="tokenomics-card">
+                            <h4>6. The Path to Mass Adoption</h4>
+                            <p>
+                                <strong>Early Stage to Market
+                                    Domination:</strong>
+                                Tangi has already solved the hardest challenge in the cannabis space: gaining a banking partner.
+                            </p>
+                            <p>
+                                <strong>Mass Token Adoption Strategy:</strong>
+                                Consumers will naturally transition from cash to token payments due to the added benefits. This creates an organic path to widespread token adoption, driving massive growth potential and value appreciation.
+                            </p>
+                        </div>
+
+                        <div class="tokenomics-card">
+                            <h4>
+                                7. ROI Potential: A Token with Real Growth
+                            </h4>
+                            <p>
+                                <strong>Token Value Increase:</strong> With an initial market capitalization driven by limited supply and the massive potential demand from 60 million end users, the value of Tangi token will rise as more users and retailers join the ecosystem.
+                            </p>
+                            <p>
+                                <strong>Early Investment Advantage:</strong>
+                               Investors in the presale will hold 100% of the initial circulating tokens, giving them exclusive control over supply. As adoption ramps up, the investor's ability to sell their tokens to a ready, growing market will provide the opportunity for significant ROI when the token lists publicly.
+                            </p>
+                        </div>
+
+                        <div class="conclusion">
+                            <h3>Why This Matters to Investors:</h3>
+                            <p>
+                                By investing in Tangi, you are not just buying into a token; you’re investing in a real-world solution to an industry desperate for change. You’re buying into the first compliant payment system that not only meets a massive market need but also has an exclusive, scarce token that is built to be the cornerstone of this solution.
+                            </p>
+                            <p>
+                                The Tangi token is set to revolutionize how payments are processed in the cannabis industry, and early investors have the chance to benefit from a highly profitable growth trajectory. With limited token supply, massive adoption potential, and real-world utility, Tangi’s tokenomics offer you the opportunity to capitalize on a first-mover advantage in a multi-billion-dollar industry.
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="cta-button">Buy Token</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- tokenomics-section-end -->
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer-area -->
+    <footer class="footer__area footer__area-two">
+        <div class="container">
+            <div class="footer__inner-wrap">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright-text">
+                            <p>
+                                Copyright & design by
+                                <a href="https://themeforest.net/user/themeadapt" target="_blank">@Themeadapt</a>
+                                - 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__view-channel">
+                            <span>VIP channel:</span>
+                            <a href="https://web.telegram.org" target="_blank" class="tg-btn">
+                                <img src="assets/img/icons/btn_right_arrow.svg" alt="icon" class="right_arrow" />
+                                <span>
+                                    <img src="assets/img/icons/btn_icon_04.svg" alt="" />
+                                    telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

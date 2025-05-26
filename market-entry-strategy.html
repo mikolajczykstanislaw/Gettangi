@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Tangi - Our Market Entry Strategy</title>
+    <meta name="description"
+        content="Learn about Tangi's step-by-step approach to building trust and capturing market share" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/default-icons.css" />
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/tg-cursor.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Market Entry Strategy Page Styling */
+
+        /* General Styling */
+        .strategy-section {
+            padding: 120px 0;
+            background-color: #0a0a0a;
+            position: relative;
+        }
+
+        /* Section Title Styling */
+        .strategy-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .strategy-section h3 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .strategy-section h4 {
+            font-size: 22px;
+            color: #703bff;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .strategy-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Strategy Step Styling */
+        .strategy-step {
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        .strategy-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .strategy-step h4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .strategy-step p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .strategy-step p:last-child {
+            margin-bottom: 0;
+        }
+
+        .breadcrumb__content {
+            text-align: center;
+        }
+
+        .breadcrumb__content .title {
+            text-align: center;
+        }
+
+        /* Step Number Styling */
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: 600;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Intro Text Styling */
+        .intro-text {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-weight: 500;
+            max-width: 900px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Center all content */
+        .col-lg-12 {
+            text-align: center;
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        /* Image Styling */
+        .strategy-image {
+            text-align: center;
+            margin: 40px auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .strategy-image:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.2) 0%,
+                    rgba(75, 89, 245, 0.2) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .strategy-image:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg,
+                    rgba(112, 59, 255, 0.15) 0%,
+                    rgba(75, 89, 245, 0.15) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .strategy-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Conclusion Styling */
+        .conclusion {
+            background: rgba(112, 59, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px solid rgba(112, 59, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        .conclusion h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .conclusion p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .conclusion p:last-of-type {
+            margin-bottom: 30px;
+        }
+
+        /* Button Styling */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid #703bff;
+            color: #703bff;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 220px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .cta-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: white;
+        }
+
+        .cta-button:hover:before {
+            width: 100%;
+        }
+
+        /* Strategy Timeline - New Addition */
+        .strategy-timeline {
+            position: relative;
+            margin: 60px auto;
+            padding-left: 50px;
+            max-width: 900px;
+            text-align: left;
+        }
+
+        .strategy-timeline:before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom,
+                    #703bff 0%,
+                    #4b59f5 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -50px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #703bff 0%, #4b59f5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 0 4px rgba(112, 59, 255, 0.2);
+        }
+
+        .timeline-content {
+            background: rgba(112, 59, 255, 0.03);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(112, 59, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .timeline-title {
+            font-size: 20px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb__area .sub-title {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(90deg,
+                    rgba(112, 59, 255, 0.1) 0%,
+                    rgba(22, 37, 97, 0.1) 100%);
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb__area .sub-title svg path {
+            fill: #703bff;
+        }
+
+        .breadcrumb__area .title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #703bff 0%, #4b59f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-align: center;
+        }
+
+        /* Center footer content */
+        .footer__area {
+            text-align: center;
+        }
+
+        .footer__inner-wrap .row {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .copyright-text {
+            text-align: center;
+        }
+
+        .footer__view-channel {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 991px) {
+            .strategy-section {
+                padding: 80px 0;
+            }
+
+            .strategy-section h2 {
+                font-size: 32px;
+            }
+
+            .strategy-section h3 {
+                font-size: 26px;
+            }
+
+            .strategy-step {
+                padding: 30px;
+                margin-bottom: 25px;
+            }
+
+            .conclusion {
+                padding: 30px;
+                margin-top: 40px;
+            }
+
+            .conclusion h3 {
+                font-size: 28px;
+            }
+
+            .strategy-timeline {
+                padding-left: 40px;
+            }
+
+            .timeline-marker {
+                left: -40px;
+            }
+
+            .footer__view-channel {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .strategy-section h2 {
+                font-size: 28px;
+            }
+
+            .strategy-section h3 {
+                font-size: 24px;
+            }
+
+            .strategy-step {
+                padding: 25px;
+                margin-bottom: 20px;
+            }
+
+            .strategy-step h4 {
+                font-size: 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .step-number {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .intro-text {
+                font-size: 18px;
+            }
+
+            .conclusion {
+                padding: 25px;
+                margin-top: 30px;
+            }
+
+            .conclusion h3 {
+                font-size: 24px;
+            }
+
+            .conclusion p {
+                font-size: 16px;
+            }
+
+            .strategy-timeline {
+                padding-left: 35px;
+            }
+
+            .timeline-marker {
+                left: -35px;
+                width: 25px;
+                height: 25px;
+            }
+
+            .timeline-content {
+                padding: 20px;
+            }
+
+            .breadcrumb__area .title {
+                font-size: 32px;
+            }
+
+            .footer__view-channel {
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .strategy-section h2 {
+                font-size: 26px;
+            }
+
+            .strategy-section h3 {
+                font-size: 22px;
+            }
+
+            .strategy-step {
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+
+            .strategy-step h4 {
+                font-size: 18px;
+            }
+
+            .step-number {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+
+            .conclusion {
+                padding: 20px;
+                margin-top: 25px;
+            }
+
+            .conclusion h3 {
+                font-size: 22px;
+            }
+
+            .strategy-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-marker {
+                left: -30px;
+                width: 22px;
+                height: 22px;
+                font-size: 12px;
+            }
+
+            .breadcrumb__area .title {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                min-width: 180px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="header" class="transparent-header">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo">
+                                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="home.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="home.html#investment-options-section">The offer</a></li>
+                                            <li><a href="home.html#our-media">Our Media</a></li>
+                                            <li><a href="home.html#features">Features</a></li>
+                                            <li><a href="home.html#roadmap">Roadmap</a></li>
+                                            <li><a href="home.html#faq">FAQ</a></li>
+                                            <li><a href="home.html#contact">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="">Investors Hub</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="the-problem.html">The Problem</a></li>
+                                            <li><a href="our-solution.html">Our Solution</a></li>
+                                            <li><a href="ourpeople.html">Our People</a></li>
+                                            <li><a href="our-partners.html">Our Partners</a></li>
+                                            <li class="menu-item-has-children horizontal-dropdown"><a
+                                                    href="#">Public Listing</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="investment-to-listing.html">Overview</a></li>
+                                                    <li><a href="getting-in-entry-plan.html">Getting In - The Entry
+                                                            Plan</a></li>
+                                                    <li><a href="getting-out-exit-plan.html">Getting Out - The Exit
+                                                            Plan</a></li>
+                                                    <li><a href="hold-for-more-upside.html">Or Hold For More
+                                                            Upside?</a></li>
+                                                    <li><a href="end-users-buy-you-profit.html">End Users Buy, You
+                                                            Profit</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="Round_1_Investors_Testimonials.html">Round 1 Investors
+                                                    Testimonials</a></li>
+                                            <li><a href="how-our-solution-works.html">How Our Solution Works</a>
+                                            </li>
+                                            <li><a href="investor-highlight-reel.html">Investor Highlight Reel</a>
+                                            </li>
+                                            <li class="active"><a href="market-entry-strategy.html">Market Entry Strategy</a></li>
+                                            <li><a href="market-potential.html">Market Potential</a></li>
+                                            <li><a href="tangi-tokenomics.html">Tangi Tokenomics</a></li>
+                                            <li><a href="legal-landscape.html">Legal Landscape</a></li>
+                                            <li><a href="our-story.html">Our Story</a></li>
+                                            <li><a href="special-thanks.html">Round 1 Members, Thank You!</a></li>
+                                            <li><a href="tangi-roadmap.html">Our Past, Present & Future</a></li>
+                                            <li><a href="mitigating-risk-factors.html">Mitigating Risk Factors</a>
+                                            </li>
+                                            <li><a href="risk-warning.html">Risk Warning for Investors</a></li>
+                                            <li><a href="potential-roi.html">The Potential ROI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://t.me/GetTangiToken" class="section-link">Connect To
+                                            Investors </a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <li class="header-btn">
+                                        <a href="./coming_soon_page.html" class="tg-btn">
+                                            <img src="assets/img/icons/btn_right_arrow.svg" alt="icon"
+                                                class="right_arrow">
+                                            <span>
+                                                <img src="assets/img/icons/btn_icon.svg" alt="">
+                                                Buy Token
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+            <div class="nav-logo">
+                <a href="home.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tgmobile__menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="https://t.me/GetTangiTokentelegram" title="Telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@tangicrypto170" title="YouTube" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://twitter.com/gettangi?s=21" title="X (Twitter)" target="_blank"
+                            style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512"
+                                fill="currentColor">
+                                <path
+                                    d="M370.6 32H471L305.4 241.4 504 480H351.6L234.4 328.8 99.4 480H0L179.2 256 0 32h157.6l104.8 130.4L370.6 32z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://discord.gg/Ff7ehSTf" title="Discord" target="_blank"><i
+                                class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <!-- header-search -->
+    <div class="search__popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search__wrapper">
+                        <div class="search__close">
+                            <button type="button" class="search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search__form">
+                            <form action="#">
+                                <div class="search__input">
+                                    <input class="search-input-field" type="text" placeholder="Type keywords here">
+                                    <span class="search-focus-border"></span>
+                                    <button>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup-overlay"></div>
+    <!-- header-search-end -->
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area">
+            <div class="breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.png"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="breadcrumb__content text-center">
+                            <h1 class="title">Our Market Entry Strategy</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- strategy-section -->
+        <section class="strategy-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <p class="intro-text">
+                            Our Market Entry Strategy: A Step-by-Step Approach to Building Trust and Capturing Market Share
+                        </p>
+                        <p style="max-width: 900px; margin: 0 auto 30px auto; text-align: center;">
+                            The cannabis industry has long struggled with a lack of reliable and compliant payment solutions, leaving retailers to rely on cash-only systems or, worse, illegal and non-compliant alternatives. These failed attempts have led to deep mistrust between cannabis retailers and payment providers. However, we’ve developed a unique strategy that doesn’t rely on hard-selling or high-pressure tactics. Instead, we’ve taken a step-by-step approach that allows us to win the trust of retailers and consumers, laying the foundation for the widespread adoption of our solution—and ultimately, our token.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="strategy-image">
+                            <img src="assets/img/otherpage/MarketEntryStrategy.webp"
+                                alt="Tangi Cannabis Superstore Concept" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="strategy-step">
+                            <h4>
+                                <span class="step-number">1</span> Free
+                                Listings on Our Cannabis Superstore
+                            </h4>
+                            <p>
+                                The first step in our strategy is to offer retailers a free listing on our online Cannabis Superstore, where we will list their products, promote their brands, and help drive their sales. Here, they will experience the benefits of our legal and compliant payment solution for the first time at no risk or cost to themselves. This is crucial because eCommerce payment options are virtually non-existent in the cannabis industry.
+                            </p>
+                            <p>
+                                By offering free advertising and free listings initially, we nurture the relationship with retailers, ensuring that they view our services as a trusted partner, not just another non-compliant payment provider looking to exploit their need for a solution to cash payments. They have been let down numerous times and are extremely sceptical of being pitched banking and payment services.
+                            </p>
+                            <p>
+                                We know that building trust takes time, and we’ve designed this step of the process to be smooth, natural, and beneficial to both parties. This approach enables us to gain traction in the industry without the hard sell, instead relying on the quality and value of our services to speak for themselves.
+                            </p>
+                        </div>
+
+                        <div class="strategy-step">
+                            <h4>
+                                <span class="step-number">2</span> Engaging
+                                Retailers and Building Trust
+                            </h4>
+                            <p>
+                                Once retailers have witnessed us processing online payments for their sales on our Superstore Ecommerce Website, their natural curiosity will prompt them to inquire about our payment services. This will organically lead to them using our payment services on their own Online Stores. It’s at this point that we start building a deeper relationship with each retailer. Rather than pitching to them; they are requesting our services because they have experienced the transparency and reliability of our payment services firsthand through the listing of their store on our Super Store Ecommerce Website. The Amazon of Cannabis, if you please.
+                            </p>
+                        </div>
+
+                        <div class="strategy-step">
+                            <h4>
+                                <span class="step-number">3</span> Expanding
+                                to Physical Store Locations
+                            </h4>
+                            <p>
+                                Once they have our payment solution works seamlessly on their eCommerce platforms, the next logical step is to introduce our services to their physical retail locations. This will complete the circle of payment services , capturing their entire business.
+                            </p>
+                            <p>
+                                Through our phased approach, we ensure that retailers are comfortable with every stage of the process, ultimately leading them to adopt our payment services for both their online and brick-and-mortar stores.
+                            </p>
+                        </div>
+
+                        <div class="strategy-step">
+                            <h4>
+                                <span class="step-number">4</span> Token
+                                Adoption
+                            </h4>
+                            <p>
+                                As we capture more retailers and consumers, we seamlessly introduce the token as a more rewarding and cost-effective payment option. By this point, consumers will already be familiar with our platform and services. With the added benefits of token payments—such as rewards, discounts, and lower fees for retailers—the transition to token adoption will be smooth and natural. Retailers will recognize that token payments carry the lowest transaction fees, and consumers will be drawn to the rewards and benefits they gain by using the token.
+                            </p>
+                        </div>
+
+                        <div class="strategy-step">
+                            <h4>
+                                <span class="step-number">5</span> Organic
+                                Growth
+                            </h4>
+                            <p>
+                                This entire process is designed to happen organically. By offering free services initially, we create a foundation of trust and reliability that allows us to nurture long-term relationships with retailers. As retailers adopt our services, they will naturally begin to embrace the token, driving widespread adoption in the industry. Our strategy is built around the idea that if we provide real value and build trust, everything else will follow—no hard sell necessary.
+                            </p>
+                        </div>
+
+                        <div class="strategy-step">
+                            <h4>
+                                <span class="step-number">6</span> A
+                                Revolutionary Marketing Approach—Building
+                                Relationships for Longevity
+                            </h4>
+                            <p>
+                                What sets us apart from every other provider in the cannabis industry is not just the technical solution we’ve built, but the marketing strategy that drives our growth. Our approach is clever, novel, and completely different from anything the industry has seen before. Instead of relying on traditional hard-sell tactics or celebrity endorsements, we focus on authentic, sincere relationship-building that is designed for the long haul.
+                            </p>
+                            <p>
+                                We understand that in the cannabis industry,
+                                where trust has been broken time and time
+                                again by failed payment providers, it's not
+                                enough to just offer a service. We have to
+                                build relationships from the ground up.
+                                That's why we begin by offering retailers
+                                free listings and advertising, giving them a
+                                true value before they even consider using
+                                our payment services. This isn't just about
+                                generating a quick profit—it's about
+                                creating an environment where retailers feel
+                                supported, valued, and comfortable with us
+                                as a partner.
+                            </p>
+                            <p>
+                                Our marketing isn’t about pushing sales—it’s about establishing credibility, creating goodwill, and nurturing long-term relationships. We want retailers to not just use our platform but to become advocates for it, spreading the word and helping us expand our network organically. This authentic, relationship-based marketing approach will be the foundation for sustainable growth and long-term success. It’s built on trust and understanding, not manipulation or hype, making it more effective than anything tried before in the space.
+                            </p>
+                            <p>
+                                By focusing on relationships instead of just transactions, we ensure that our customers—retailers and consumers alike—become loyal, engaged users of our service. This long-term vision of genuine connection will allow us to outlast any competitors who rely on quick-fix marketing tactics. Ultimately, it’s about creating a community of retailers and consumers who believe in the value we bring, and who will stick with us as we grow and evolve.
+                            </p>
+                        </div>
+
+                        <div class="conclusion">
+                            <h3>In Summary:</h3>
+                            <p>
+                                Our market entry strategy is built on a foundation of trust, execution, and organic growth. By starting with free listings and advertising, we provide retailers with something they desperately need: a legal and compliant way to accept payments. As we build relationships and trust, we naturally transition retailers to our payment services for their own eCommerce stores and eventually their physical retail locations. All of this leads to the seamless adoption of our token, creating massive value for both retailers and consumers. By capturing the market in this way, we set the stage for the success of the token and ensure long-term growth for all involved.
+                            </p>
+                            <p>
+                                No hard sell. No gimmicks. Just trust, value, and execution at every stage of the process. This is how we capture the market and drive token adoption.
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="cta-button">Buy Token</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- strategy-section-end -->
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer-area -->
+    <footer class="footer__area footer__area-two">
+        <div class="container">
+            <div class="footer__inner-wrap">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-6">
+                        <div class="copyright-text text-center">
+                            <p>
+                                Copyright & design by
+                                <a href="https://themeforest.net/user/themeadapt" target="_blank">@Themeadapt</a>
+                                - 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__view-channel text-center">
+                            <span>VIP channel:</span>
+                            <a href="https://web.telegram.org" target="_blank" class="tg-btn">
+                                <img src="assets/img/icons/btn_right_arrow.svg" alt="icon" class="right_arrow" />
+                                <span>
+                                    <img src="assets/img/icons/btn_icon_04.svg" alt="" />
+                                    telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/tg-cursor.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
